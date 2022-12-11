@@ -35,7 +35,7 @@ class State:
             return True
         return False
 
-    def checkVertical(self, coordinates):
+    def checkHorizontal(self, coordinates):
         i = coordinates[1] - 1
         target = self.board[coordinates[0]][coordinates[1]]
         count = 1
@@ -55,7 +55,7 @@ class State:
         
         return count >= 5
 
-    def checkHorizontal(self, coordinates):
+    def checkVertical(self, coordinates):
         j = coordinates[0] - 1
         target = self.board[coordinates[0]][coordinates[1]]
         count = 1

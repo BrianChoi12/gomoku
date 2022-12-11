@@ -120,9 +120,10 @@ def mcts_policy(seconds):
         if state not in nodeDict:
             nodeDict[state] = myNode(state)
         node = nodeDict[state]
-
+        count = 0
         end = time.time() + seconds
         while(time.time() < end):
+            count += 1
             sequence = traverse(node, nodeDict)
             leaf = sequence[-1]
             value = simulate(leaf.position)
