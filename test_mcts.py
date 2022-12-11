@@ -1,6 +1,7 @@
 import random
 import sys
 import mcts
+import mcts_stephen
 import argparse
 
 from gomoku import gomoku
@@ -58,6 +59,8 @@ def compare_policies(game, p1, p2, games, prob):
             p1_wins += 1
         else:
             p2_wins += 1
+        print(f"Payoff (for player 1, {'White' if i % 2 == 0 else 'Black'}): {position.payoff() * (1 if i % 2 == 0 else -1)}")
+        position.display()
 
     return p1_score / games, p1_wins / games
 
@@ -104,7 +107,7 @@ if __name__ == '__main__':
         test_game(game,
                   args.count,
                   0,
-                  lambda: mcts.mcts_policy(args.time),
+                  lambda: mcts_stephen.mcts_policy(args.time),
                   lambda: mcts.mcts_policy(args.time))
         sys.exit(0)
     except MCTSTestError as err:
