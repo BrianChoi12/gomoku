@@ -65,7 +65,7 @@ class State:
             else: 
                 break
             j -= 1
-        j = coordinates[1] + 1
+        j = coordinates[0] + 1
         while(j < self.size):
             if self.board[j][coordinates[1]] == target:
                 count += 1
