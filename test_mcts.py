@@ -34,6 +34,7 @@ def compare_policies(game, p1, p2, games, prob):
                     move = p2_policy(position)
             else:
                 move = random_choice(position)
+            
             position = position.successor(move)
 
         #checking that minimax is working correctly by testing on pegging
@@ -89,6 +90,8 @@ if __name__ == '__main__':
     parser.add_argument('--count', dest='count', type=int, action="store", default=2, help='number of games to play (default=2')
     parser.add_argument('--time', dest='time', type=float, action="store", default=0.1, help='time for MCTS per move')
     parser.add_argument('--game', dest="game", choices=["gomoku"], default="gomoku", help="game to play")
+    parser.add_argument('--size', dest='size', type=int, action="store", default=5, help='size of board, default 5')
+
     args = parser.parse_args()
 
     try:
@@ -100,7 +103,7 @@ if __name__ == '__main__':
         game = gomoku(5)
         test_game(game,
                   args.count,
-                  1,
+                  0,
                   lambda: mcts.mcts_policy(args.time),
                   lambda: mcts.mcts_policy(args.time))
         sys.exit(0)

@@ -1,3 +1,4 @@
+import copy
 class State:
     def __init__(self, size, player0, player1, empty, board, move):
         self.size = size
@@ -8,13 +9,18 @@ class State:
         self.pay = 0
         self.board = board #[[0] * self.size for i in range(self.size)]
         
-        if(move != None): 
-            self.board[self.move[0]][self.move[1]] = self.actor()
-            self.pieces[self.actor()].add(self.move)
-            self.pieces[2].remove(self.move)
-        
         self.move = move
 
+        if(move != None): 
+            if(self.actor() == 1): 
+                self.board[self.move[0]][self.move[1]] = 1
+            else:
+                self.board[self.move[0]][self.move[1]] = -1
+
+            self.pieces[self.actor()].add(self.move)
+
+            self.pieces[2].remove(self.move)
+        
     def actor(self):
         if(len(self.pieces[0]) > len(self.pieces[1])):
             return 1
@@ -22,10 +28,11 @@ class State:
             return 0
 
     def successor(self, action):
-        return State(self.size, self.pieces[0], self.pieces[1], self.pieces[2], self.board, self.move)
+        return State(self.size, copy.deepcopy(self.pieces[0]), copy.deepcopy(self.pieces[1]),\
+         copy.deepcopy(self.pieces[2]), copy.deepcopy(self.board), action)
 
     def is_terminal(self):
-        if(self.checkWinner()):
+        if(self.checkWinner() or len(self.pieces[2]) == 0):
             return True
         return False
 
@@ -47,7 +54,7 @@ class State:
                 break
             i += 1
         
-        return count >= self.goal
+        return count >= 5
 
     def checkHorizontal(self, coordinates):
         j = coordinates[0] - 1
@@ -67,7 +74,7 @@ class State:
                 break
             j += 1
         
-        return count >= self.goal
+        return count >= 5
 
     def checkDiagonal(self, coordinates):
         target = self.board[coordinates[0]][coordinates[1]]
@@ -92,7 +99,7 @@ class State:
             i += 1
             j += 1
         
-        if count >= self.goal:
+        if count >= 5:
             return True
         
         count = 1
@@ -116,7 +123,7 @@ class State:
             i += 1
             j -= 1
 
-        return count >= self.goal
+        return count >= 5
     
     def checkWinner(self):
         if self.move == None:
@@ -125,8 +132,6 @@ class State:
         or self.checkDiagonal(self.move)
 
         
-
-    
     """def checkWinner(self):
         #copied from stack overflow: 
         # https://stackoverflow.com/questions/6313308/get-all-the-diagonals-in-a-matrix-list-of-lists-in-python
