@@ -36,7 +36,8 @@ def compare_policies(game, p1, p2, games, prob):
                 move = random_choice(position)
             
             position = position.successor(move)
-
+        #import pdb; pdb.set_trace()
+        
         #checking that minimax is working correctly by testing on pegging
         # and ensuring that MCTS never beats minimax with depth 14, which can search the entire
         # tree and so is optimal
@@ -49,7 +50,8 @@ def compare_policies(game, p1, p2, games, prob):
         # to see final position, which for pegging includes the
         # complete sequence of cards played
         # print(position)
-
+        #print(position.board)
+        #print(position.payoff() * (1 if i % 2 == 0 else -1))
         p1_score += position.payoff() * (1 if i % 2 == 0 else -1)
         if position.payoff() == 0:
             p1_wins += 0.5
@@ -100,7 +102,7 @@ if __name__ == '__main__':
         if args.time <= 0:
             raise MCTSTestError("time must be positive")
 
-        game = gomoku(5)
+        game = gomoku(args.size)
         test_game(game,
                   args.count,
                   0,

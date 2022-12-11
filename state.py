@@ -3,11 +3,11 @@ class State:
     def __init__(self, size, player0, player1, empty, board, move):
         self.size = size
         self.pieces = dict()
-        self.pieces[0] = player0 #player 0 pieces (white)
-        self.pieces[1] = player1 #player 1 pieces (black)
-        self.pieces[2] = empty #empty squares
+        self.pieces[0] = copy.deepcopy(player0) #player 0 pieces (white)
+        self.pieces[1] = copy.deepcopy(player1) #player 1 pieces (black)
+        self.pieces[2] = copy.deepcopy(empty) #empty squares
         self.pay = 0
-        self.board = board #[[0] * self.size for i in range(self.size)]
+        self.board = copy.deepcopy(board) #[[0] * self.size for i in range(self.size)]
         
         self.move = move
 
@@ -18,7 +18,6 @@ class State:
                 self.board[self.move[0]][self.move[1]] = -1
 
             self.pieces[self.actor()].add(self.move)
-
             self.pieces[2].remove(self.move)
         
     def actor(self):
@@ -28,8 +27,8 @@ class State:
             return 0
 
     def successor(self, action):
-        return State(self.size, copy.deepcopy(self.pieces[0]), copy.deepcopy(self.pieces[1]),\
-         copy.deepcopy(self.pieces[2]), copy.deepcopy(self.board), action)
+        return State(self.size, self.pieces[0], self.pieces[1],\
+         self.pieces[2], self.board, action)
 
     def is_terminal(self):
         if(self.checkWinner() or len(self.pieces[2]) == 0):
@@ -128,8 +127,15 @@ class State:
     def checkWinner(self):
         if self.move == None:
             return False
-        return self.checkHorizontal(self.move) or self.checkVertical(self.move) \
+        check = self.checkHorizontal(self.move) or self.checkVertical(self.move) \
         or self.checkDiagonal(self.move)
+
+        if(check):
+            if(self.actor() == 0):
+                self.pay = 1
+            else:
+                self.pay = -1
+        return check
 
         
     """def checkWinner(self):
