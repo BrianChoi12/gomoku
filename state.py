@@ -12,16 +12,20 @@ class State:
         self.move = move
 
         if(move != None): 
-            if(self.actor() == 1): 
+            actor = self.actor()
+            if(actor == 1): 
                 self.board[self.move[0]][self.move[1]] = 1 # Black stones are 1
             else:
                 self.board[self.move[0]][self.move[1]] = -1 # White stones are -1
 
-            self.pieces[self.actor()].add(self.move)
+            self.pieces[actor].add(self.move)
             self.pieces[2].remove(self.move)
         
     def actor(self):
-        # Black (1) should move first
+        '''
+        Returns the next actor (white=0, black=1) for the current state
+        '''
+        # White (0) should move first
         if(len(self.pieces[0]) > len(self.pieces[1])):
             return 1
         else:
@@ -132,10 +136,12 @@ class State:
         or self.checkDiagonal(self.move)
 
         if(check):
+            # The game is over and the next move is white (0, player 1), so black (1, player 2)
+            # won the game which means the payoff (from player 1's POV) is -1
             if(self.actor() == 0):
-                self.pay = 1
-            else:
                 self.pay = -1
+            else:
+                self.pay = 1
         return check
 
         
@@ -175,13 +181,12 @@ class State:
                     to_display += ". "
                 elif square == 1:
                     # Black stones are 1
-                    to_display += "\033[07mO\033[0m "
+                    to_display += "O "
                 elif square == -1:
                     # White stones are -1
-                    to_display += "O "
+                    to_display += "\033[07mO\033[0m "
                 else:
                     raise Exception(f"Invalid character in board: {square}")
             to_display += "\n"
 
         print(to_display)
-
