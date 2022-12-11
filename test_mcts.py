@@ -90,10 +90,10 @@ def test_game(game, count, p_random, p1_policy_fxn, p2_policy_fxn):
     
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Test MCTS agent")
-    parser.add_argument('--count', dest='count', type=int, action="store", default=2, help='number of games to play (default=2')
-    parser.add_argument('--time', dest='time', type=float, action="store", default=0.1, help='time for MCTS per move')
+    parser.add_argument('--count', dest='count', type=int, action="store", default=2, help='number of games to play (default=2)')
+    parser.add_argument('--time', dest='time', type=float, action="store", default=0.1, help='time for MCTS per move in seconds')
     parser.add_argument('--game', dest="game", choices=["gomoku"], default="gomoku", help="game to play")
-    parser.add_argument('--size', dest='size', type=int, action="store", default=5, help='size of board, default 5')
+    parser.add_argument('--size', dest='size', type=int, action="store", default=5, help='size of board (default 5)')
 
     args = parser.parse_args()
 
