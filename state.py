@@ -13,14 +13,15 @@ class State:
 
         if(move != None): 
             if(self.actor() == 1): 
-                self.board[self.move[0]][self.move[1]] = 1
+                self.board[self.move[0]][self.move[1]] = 1 # Black stones are 1
             else:
-                self.board[self.move[0]][self.move[1]] = -1
+                self.board[self.move[0]][self.move[1]] = -1 # White stones are -1
 
             self.pieces[self.actor()].add(self.move)
             self.pieces[2].remove(self.move)
         
     def actor(self):
+        # Black (1) should move first
         if(len(self.pieces[0]) > len(self.pieces[1])):
             return 1
         else:
@@ -164,3 +165,23 @@ class State:
 
     def get_actions(self):
         return list(self.pieces[2])
+
+    def display(self):
+        to_display = ""
+
+        for row in self.board:
+            for square in row:
+                if square == 0:
+                    to_display += ". "
+                elif square == 1:
+                    # Black stones are 1
+                    to_display += "\033[07mO\033[0m "
+                elif square == -1:
+                    # White stones are -1
+                    to_display += "O "
+                else:
+                    raise Exception(f"Invalid character in board: {square}")
+            to_display += "\n"
+
+        print(to_display)
+
