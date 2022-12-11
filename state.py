@@ -12,6 +12,8 @@ class State:
             self.board[self.move[0]][self.move[1]] = self.actor()
             self.pieces[self.actor()].add(self.move)
             self.pieces[2].remove(self.move)
+        
+        self.move = move
 
     def actor(self):
         if(len(self.pieces[0]) > len(self.pieces[1])):
@@ -20,74 +22,112 @@ class State:
             return 0
 
     def successor(self, action):
-        return State(self.size, self.pieces[0], self.pieces[1], self.board, self.move)
+        return State(self.size, self.pieces[0], self.pieces[1], self.pieces[2], self.board, self.move)
 
     def is_terminal(self):
         if(self.checkWinner()):
             return True
         return False
 
-    """
-    def checkFiveH(self, coord):
-        if(coord[1] > self.size - 5):
-            return False
-        if coord in self.pieces[0]:
-            target = 0
-        else:
-            target = 1
-        for i in range(coord[1]+1,coord[1]+5):
-            if (coord[0], i) not in self.pieces[target]:
-                return False
-        return True
-
-    def checkFiveV(self, coord):
-        if(coord[0] > self.size - 5):
-            return False
-        if coord in self.pieces[0]:
-            target = 0
-        else:
-            target = 1
-        for i in range(coord[0]+1,coord[0]+5):
-            if (i, coord[1]) not in self.pieces[target]:
-                return False
-        return True   
-
-    def checkHorVer(self):
-        for i in range(self.size):
-            for j in range(self.size):
-                if((i,j) not in self.pieces[2]): 
-                    if self.checkFiveH((i,j)) or self.checkFiveV((i,j)):
-                        return True
-        return False
-
-    """
-
-    def inARow(self, sequence):
+    def checkVertical(self, coordinates):
+        i = coordinates[1] - 1
+        target = self.board[coordinates[0]][coordinates[1]]
+        count = 1
+        while(i >= 0):
+            if self.board[coordinates[0]][i] == target:
+                count += 1
+            else: 
+                break
+            i -= 1
+        i = coordinates[1] + 1
+        while(i < self.size):
+            if self.board[coordinates[0]][i] == target:
+                count += 1
+            else: 
+                break
+            i += 1
         
-        for lst in sequence: 
-            if len(lst) < self.size:
-                continue
-            
-            for i in range(len(lst)):
-                target = lst[i]
-                count = 1
-                i += 1
-                while(i < len(lst)):
-                    if lst[i] == target:
-                        count += 1
-                    else:
-                        break
-                if(count > self.size): 
-                    if(target == 0):
-                        self.pay = 1
-                    else:
-                        self.pay = -1
+        return count >= self.goal
 
-                    return True
-        return False
+    def checkHorizontal(self, coordinates):
+        j = coordinates[0] - 1
+        target = self.board[coordinates[0]][coordinates[1]]
+        count = 1
+        while(j >= 0):
+            if self.board[j][coordinates[1]] == target:
+                count += 1
+            else: 
+                break
+            j -= 1
+        j = coordinates[1] + 1
+        while(j < self.size):
+            if self.board[j][coordinates[1]] == target:
+                count += 1
+            else: 
+                break
+            j += 1
+        
+        return count >= self.goal
 
+    def checkDiagonal(self, coordinates):
+        target = self.board[coordinates[0]][coordinates[1]]
+        count = 1
+        i = coordinates[0] - 1
+        j = coordinates[1] - 1
+        while(i >= 0 and j >= 0):
+            if self.board[i][j] == target:
+                count += 1
+            else: 
+                break
+            i -= 1
+            j -= 1
+        
+        i = coordinates[0] + 1
+        j = coordinates[1] + 1
+        while(i < self.size and j < self.size):
+            if self.board[i][j] == target:
+                count += 1
+            else: 
+                break
+            i += 1
+            j += 1
+        
+        if count >= self.goal:
+            return True
+        
+        count = 1
+        i = coordinates[0] - 1
+        j = coordinates[1] + 1
+        while(i >= 0 and j < self.size):
+            if self.board[i][j] == target:
+                count += 1
+            else: 
+                break
+            i -= 1
+            j += 1
+        
+        i = coordinates[0] + 1
+        j = coordinates[1] - 1
+        while(i < self.size and j >= 0):
+            if self.board[i][j] == target:
+                count += 1
+            else: 
+                break
+            i += 1
+            j -= 1
 
+        return count >= self.goal
+    
     def checkWinner(self):
+        if self.move == None:
+            return False
+        return self.checkHorizontal(self.move) or self.checkVertical(self.move) \
+        or self.checkDiagonal(self.move)
+
+        
+
+    
+    """def checkWinner(self):
         #copied from stack overflow: 
         # https://stackoverflow.com/questions/6313308/get-all-the-diagonals-in-a-matrix-list-of-lists-in-python
 
@@ -106,10 +146,10 @@ class State:
                 fdiag[x+y].append(self.board[y][x])
                 bdiag[x-y-min_bdiag].append(self.board[y][x])
 
-        return self.inARow(cols) or self.inARow(rows) or self.inARow(fdiag) or self.inARow(bdiag)
+        return self.inARow(cols) or self.inARow(rows) or self.inARow(fdiag) or self.inARow(bdiag)"""
 
     def payoff(self):
         return self.pay
 
     def get_actions(self):
-        return self.pieces[2]
+        return list(self.pieces[2])
