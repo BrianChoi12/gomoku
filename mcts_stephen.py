@@ -74,9 +74,11 @@ def mcts_policy(time_limit):
         # Set tree = root
         if root not in node_edges_table:
             node_edges_table[root] = [[0,0], dict()]
+        # count = 0
 
         # Until no time
         while (time.time() - start_time < time_limit):
+            # count += 1
             # Traverse tree to leaf using UCB2
             look, leaf = True, root
             payoff = None
@@ -129,6 +131,7 @@ def mcts_policy(time_limit):
         best_move = None
         best_stats = float('-inf')
         # who = -1 if int(root.actor()) else 1 # 1 or 0
+        # print("iterations:", count)
         for k,v in node_edges_table[root][1].items():
             child = k
             # if node_edges_table[child][0][1] == 0:
