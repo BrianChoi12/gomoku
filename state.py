@@ -21,15 +21,19 @@ class State:
             self.pieces[actor].add(self.move)
             self.pieces[2].remove(self.move)
         
+        self._compute_hash()
+        
     def actor(self):
         '''
         Returns the next actor (white=0, black=1) for the current state
         '''
         # White (0) should move first
-        if(len(self.pieces[0]) > len(self.pieces[1])):
+        if ((len(self.pieces[0]) - 1) == len(self.pieces[1])):
             return 1
-        else:
+        elif (len(self.pieces[0]) == len(self.pieces[1])):
             return 0
+        else:
+            raise Exception("Difference between # white and # black is not 1 or 0")
 
     def successor(self, action):
         return State(self.size, self.pieces[0], self.pieces[1],\
@@ -190,3 +194,13 @@ class State:
             to_display += "\n"
 
         print(to_display)
+
+    def _compute_hash(self):
+        # this may have hash conflicts given that the board size is so large 3^(n^2)
+        self.hash = hash(tuple([tuple(x) for x in self.board])) + self.actor()
+        
+    def __hash__(self):
+        return self.hash
+
+    def __eq__(self, other):
+            return isinstance(other, self.__class__) and self.actor() == other.actor() and self.board == other.board
