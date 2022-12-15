@@ -10,4 +10,4 @@ class gomoku:
         for i in range(self.size):
             for j in range(self.size):
                 empty.add((i,j))
-        return State(self.size, set(), set(), empty, board, None)
+        return State(self.size, set(), set(), empty, board, None, set(), start=True)

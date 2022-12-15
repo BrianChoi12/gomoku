@@ -1,15 +1,18 @@
 import copy
 class State:
-    def __init__(self, size, player0, player1, empty, board, move):
+    def __init__(self, size, player0, player1, empty, board, move, potential=set(), start=False):
         self.size = size
         self.pieces = dict()
         self.pieces[0] = copy.deepcopy(player0) #player 0 pieces (white)
         self.pieces[1] = copy.deepcopy(player1) #player 1 pieces (black)
-        self.pieces[2] = copy.deepcopy(empty) #empty squares
+        self.pieces[2] = copy.deepcopy(empty) #empty squares //TODO: get rid of self.pieces[2] 
         self.pay = 0
         self.board = copy.deepcopy(board) #[[0] * self.size for i in range(self.size)]
+        self.next_moves = copy.deepcopy(potential)
         
         self.move = move
+
+        self.start = start
 
         if(move != None): 
             actor = self.actor()
@@ -17,11 +20,31 @@ class State:
                 self.board[self.move[0]][self.move[1]] = 1 # Black stones are 1
             else:
                 self.board[self.move[0]][self.move[1]] = -1 # White stones are -1
+            
+            if(move in self.next_moves):
+                self.next_moves.remove(move)
+
+            directions = [[0,1],[0,-1],[1,0],[-1,0],[1,1],[-1,-1],[1,-1],[-1,1]]
+            x, y = move[0], move[1]
+            for d in directions: 
+                surrounding = (x+d[0], y+d[1])
+                if self.valid(surrounding) and surrounding not in self.pieces[0] \
+                and surrounding not in self.pieces[1]:
+                    self.next_moves.add(surrounding)
 
             self.pieces[actor].add(self.move)
-            self.pieces[2].remove(self.move)
+            try:
+                self.pieces[2].remove(self.move)
+            except:
+                import pdb; pdb.set_trace()
         
         self._compute_hash()
+
+    def valid(self, coordinates):
+        for element in coordinates:
+            if element < 0 or element >= self.size:
+                return False
+        return True
         
     def actor(self):
         '''
@@ -37,7 +60,7 @@ class State:
 
     def successor(self, action):
         return State(self.size, self.pieces[0], self.pieces[1],\
-         self.pieces[2], self.board, action)
+         self.pieces[2], self.board, action, self.next_moves)
 
     def is_terminal(self):
         if(self.checkWinner() or len(self.pieces[2]) == 0):
@@ -174,7 +197,10 @@ class State:
         return self.pay
 
     def get_actions(self):
-        return list(self.pieces[2])
+        if self.start:
+            return list(self.pieces[2])
+        else: 
+            return list(self.next_moves)
 
     def display(self):
         to_display = ""
