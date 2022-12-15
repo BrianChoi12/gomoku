@@ -109,7 +109,7 @@ if __name__ == '__main__':
         test_game(game,
                   args.count,
                   0,
-                  lambda: mcts_sam.mcts_policy(args.time),
+                  lambda: mcts.mcts_policy(args.time),
                   lambda: mcts_stephen.mcts_policy(args.time))
         sys.exit(0)
     except MCTSTestError as err:

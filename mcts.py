@@ -8,7 +8,6 @@ class myNode():
         node class that represents node in MCTS tree, saving various features.
         the variables stored in this class persist throughout a single game but 
         not throughout the entire lifetime of the program
-
         position - state that the game is in 
     """
     def __init__(self, position):
@@ -25,7 +24,6 @@ class myNode():
 def traverse(node, nodeDict):
     """
         find leaf node by traversing from starting node and applying UCB2 formula
-
         node - node representing starting position (represents root of MCTS tree)
         nodeDict - dictionary that stores all the nodes
     """
@@ -94,7 +92,6 @@ def traverse(node, nodeDict):
 def simulate(leaf):
     """
         rollout from leaf node and return payoff
-
         leaf - node representing leaf found through traverse    
     """
     search = leaf
@@ -112,7 +109,6 @@ def simulate(leaf):
 def mcts_policy(seconds):
     """
         run mcts for given number of seconds
-
         seconds - number of seconds to run for
     """
     nodeDict = dict()
