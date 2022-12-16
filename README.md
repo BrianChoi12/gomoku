@@ -18,6 +18,7 @@ The Gomoku script can be run with arguments
 --count #           The number of games to play (default=2) 
 --time #            The time for each agent per move in seconds (default=2)
 --size #            The size of the Gomoku board, where size is the side length of the square board (default=7) 
+--game              Which agent you wish to play against the baseline ["mcts", "abminimax"] (default="mcts")
 ```
 Note that there is a limit of game board size 10 because in `state.py` precomputation is only done for game boards up to size 10. Changing the `sz` variable can fix this.
 

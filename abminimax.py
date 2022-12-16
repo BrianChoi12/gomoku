@@ -109,6 +109,51 @@ def abminimax(state, alpha, beta, h, depth, start_time, time_limit):
         return (b, best_move, True, pruning_done)
 
 
+def baseline_policy(time_limit):
+    '''
+    Input: 
+        time: (secs)
+    Output: 
+        lambda function that can take a position and return the move suggested by alpha-beta pruned minimax
+
+    Lambda wrapper for alpha-beta minimax policy
+    '''
+
+    # You only need transposition table within a single fxn call; initialize it in fxn
+
+    def fxn(root):
+        global ttabminimax
+
+        # Time 
+        start_time = time.time()
+        best_move = None
+        
+        # Init transpotision table
+        ttabminimax = LRU(abminimax, maxsize=1024)
+        
+        # Iterative deepening, begin searching at depth 2
+        it_depth = 2
+        searched_depth = None
+
+        while (time.time() - start_time < time_limit):
+            val, move, finished, _ = ttabminimax(root, float('-inf'), float('inf'), heur, it_depth, start_time, time_limit)
+            if finished:
+                best_move = move
+                
+                # Increase iterative deepening
+                searched_depth = it_depth
+                break
+                it_depth += 1
+            else:
+                break
+        
+        # print(f"Deepest depth searched: {searched_depth}")
+        # print(ttabminimax.cache)
+        # print(f"Hits: {ttabminimax.hits}")
+
+        return best_move
+    return fxn
+
 def abminimax_policy(time_limit):
     '''
     Input: 
@@ -131,7 +176,7 @@ def abminimax_policy(time_limit):
         # Init transpotision table
         ttabminimax = LRU(abminimax, maxsize=1024)
         
-        # Iterative deepening, begin searching at depth 3
+        # Iterative deepening, begin searching at depth 2
         it_depth = 2
         searched_depth = None
 
@@ -139,7 +184,7 @@ def abminimax_policy(time_limit):
             val, move, finished, _ = ttabminimax(root, float('-inf'), float('inf'), heur, it_depth, start_time, time_limit)
             if finished:
                 best_move = move
-                # print(val)
+                
                 # Increase iterative deepening
                 searched_depth = it_depth
                 it_depth += 1
@@ -148,7 +193,7 @@ def abminimax_policy(time_limit):
         
         print(f"Deepest depth searched: {searched_depth}")
         # print(ttabminimax.cache)
-        print(f"Hits: {ttabminimax.hits}")
+        # print(f"Hits: {ttabminimax.hits}")
 
         return best_move
     return fxn
