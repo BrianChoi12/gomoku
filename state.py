@@ -6,8 +6,8 @@ import random
 # Precompute tuple to heuristic evaluation
 sz = 9
 row_to_heur = dict()
-block = {2:10, 3:200, 4:500, 5:6000}
-unblocked = {2:50, 3:500, 4:4800, 5:6000}
+block = {2:10, 3:200, 4:500, 5:100000}
+unblocked = {2:50, 3:500, 4:4800, 5:100000}
 # starter = time.time()
 for i in range(5,sz+1):
     for rw in list(itertools.product(*[(-1, 0, 1)] * i)):

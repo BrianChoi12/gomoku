@@ -132,7 +132,7 @@ def abminimax_policy(time_limit):
         ttabminimax = LRU(abminimax, maxsize=1024)
         
         # Iterative deepening, begin searching at depth 3
-        it_depth = 3
+        it_depth = 2
         searched_depth = None
 
         while (time.time() - start_time < time_limit):

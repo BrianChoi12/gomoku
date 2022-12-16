@@ -5,6 +5,7 @@ import mcts_stephen
 import mcts_sam
 import abminimax
 import argparse
+import mc_rave
 
 from gomoku import gomoku
 
@@ -109,7 +110,7 @@ if __name__ == '__main__':
         test_game(game,
                   args.count,
                   0,
-                  lambda: mcts.mcts_policy(args.time),
+                  lambda: mc_rave.mcts_policy(args.time),
                   lambda: abminimax.abminimax_policy(args.time))
         sys.exit(0)
     except MCTSTestError as err:
