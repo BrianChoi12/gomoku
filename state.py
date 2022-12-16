@@ -1,7 +1,74 @@
 import copy
+import itertools
+import time
+import random
+
+# Precompute tuple to heuristic evaluation
+sz = 9
+row_to_heur = dict()
+block = {2:10, 3:200, 4:500, 5:6000}
+unblocked = {2:50, 3:500, 4:4800, 5:6000}
+# starter = time.time()
+for i in range(5,sz+1):
+    for rw in list(itertools.product(*[(-1, 0, 1)] * i)):
+        heuristic = 0
+        players = [-1,1]
+        for player in players: 
+            blocked = True
+            count = 0
+            for i in range(len(rw)):
+                if count == 0 and rw[i] == -1 * player:
+                    blocked = True
+                elif count == 0 and rw[i] == 0:
+                    blocked = False
+                elif rw[i] == player:
+                    count += 1
+                else:
+                    # We have hit either empty (0) or enemy stone and we have some streak of ours
+                    if count == 1:
+                        count = 0
+                        if rw[i] == 0: 
+                            blocked = False
+                        else:
+                            blocked = True
+                        continue
+                    elif count > 5:
+                        count = 5
+                    if blocked and rw[i] == 0:
+                        if player == 1:
+                            heuristic -= block[count]
+                        else:
+                            heuristic += block[count]
+                        blocked = False
+                    elif not blocked and rw[i] == -1 * player:
+                        if player == 1:
+                            heuristic -= block[count]
+                        else:
+                            heuristic += block[count]
+                        blocked = True
+                    elif not blocked and rw[i] == 0:
+                        if player == 1:
+                            heuristic -= unblocked[count]
+                        else:
+                            heuristic += unblocked[count]
+                        blocked = False
+                    count = 0
+            if count > 1:
+                if count > 5:
+                    count = 5
+                if not blocked:
+                    if player == 1:
+                        heuristic -= block[count]
+                    else:
+                        heuristic += block[count]
+        row_to_heur[rw] = heuristic
+# print(f"This took {time.time() - starter} seconds")   
+# for k in random.choices(list(row_to_heur), k=5):
+#     print(k, row_to_heur[k])
+
 
 class State:
-    def __init__(self, size, player0, player1, empty, board, move, potential=set(), start=False):
+    def __init__(self, size, player0, player1, empty, board, board90, board45, board135, move, potential=set(), start=False):
         self.size = size
         self.pieces = dict()
         self.pieces[0] = copy.deepcopy(player0) #player 0 pieces (white)
@@ -9,6 +76,9 @@ class State:
         self.pieces[2] = copy.deepcopy(empty) #empty squares //TODO: get rid of self.pieces[2] 
         self.pay = 0
         self.board = copy.deepcopy(board) #[[0] * self.size for i in range(self.size)]
+        self.board45 = copy.deepcopy(board45)
+        self.board90 = copy.deepcopy(board90)
+        self.board135 = copy.deepcopy(board135)
         self.next_moves = copy.deepcopy(potential)
         self.move = move
         self.start = start
@@ -17,8 +87,14 @@ class State:
             actor = self.actor()
             if(actor == 1): 
                 self.board[self.move[0]][self.move[1]] = 1 # Black stones are 1
+                self.board90[self.move[1]][self.move[0]] = 1
+                self.board45[self.move[1] + self.move[0]][min(self.move[1], self.size - self.move[0] - 1)] = 1
+                self.board135[self.move[0] + self.size - 1 - self.move[1]][min(self.size - self.move[1] - 1, self.size - self.move[0] - 1)] = 1
             else:
                 self.board[self.move[0]][self.move[1]] = -1 # White stones are -1
+                self.board90[self.move[1]][self.move[0]] = -1
+                self.board45[self.move[1] + self.move[0]][min(self.move[1], self.size - self.move[0] - 1)] = -1
+                self.board135[self.move[0] + self.size - 1 - self.move[1]][min(self.size - self.move[1] - 1, self.size - self.move[0] - 1)] = -1
             
             if(move in self.next_moves):
                 self.next_moves.remove(move)
@@ -56,7 +132,7 @@ class State:
 
     def successor(self, action):
         return State(self.size, self.pieces[0], self.pieces[1],\
-         self.pieces[2], self.board, action, self.next_moves)
+         self.pieces[2], self.board, self.board90, self.board45, self.board135, action, self.next_moves)
 
     def is_terminal(self):
         if(self.checkWinner() or len(self.pieces[2]) == 0):
@@ -194,6 +270,15 @@ class State:
             to_display += "\n"
 
         print(to_display)
+
+    def heuristic(self):
+        # Black stones = 1, White Stones = -1
+        h = 0
+        for board in [self.board, self.board90, self.board45, self.board135]:
+            for row in board:
+                if len(row) >= 5:
+                    h += row_to_heur[tuple(row)]
+        return h
 
     """
     def get_pred(self, action):

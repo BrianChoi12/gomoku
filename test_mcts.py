@@ -3,6 +3,7 @@ import sys
 import mcts
 import mcts_stephen
 import mcts_sam
+import abminimax
 import argparse
 
 from gomoku import gomoku
@@ -26,7 +27,6 @@ def compare_policies(game, p1, p2, games, prob):
         p1_policy = p1()
         p2_policy = p2()
         position = game.initial_state()
-        copy = position
 
         while not position.is_terminal():
             position.display()
@@ -110,7 +110,7 @@ if __name__ == '__main__':
                   args.count,
                   0,
                   lambda: mcts.mcts_policy(args.time),
-                  lambda: mcts_stephen.mcts_policy(args.time))
+                  lambda: abminimax.abminimax_policy(args.time))
         sys.exit(0)
     except MCTSTestError as err:
         print(sys.argv[0] + ":", str(err))
