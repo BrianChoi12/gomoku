@@ -1,4 +1,5 @@
 import copy
+
 class State:
     def __init__(self, size, player0, player1, empty, board, move, potential=set(), start=False):
         self.size = size
@@ -9,9 +10,7 @@ class State:
         self.pay = 0
         self.board = copy.deepcopy(board) #[[0] * self.size for i in range(self.size)]
         self.next_moves = copy.deepcopy(potential)
-        
         self.move = move
-
         self.start = start
 
         if(move != None): 
@@ -33,10 +32,7 @@ class State:
                     self.next_moves.add(surrounding)
 
             self.pieces[actor].add(self.move)
-            try:
-                self.pieces[2].remove(self.move)
-            except:
-                import pdb; pdb.set_trace()
+            self.pieces[2].remove(self.move)
         
         self._compute_hash()
 
@@ -171,34 +167,12 @@ class State:
                 self.pay = 1
         return check
 
-        
-    """def checkWinner(self):
-        #copied from stack overflow: 
-        # https://stackoverflow.com/questions/6313308/get-all-the-diagonals-in-a-matrix-list-of-lists-in-python
-
-        max_col = len([0])
-        max_row = len(self.board)
-        cols = [[] for _ in range(max_col)]
-        rows = [[] for _ in range(max_row)]
-        fdiag = [[] for _ in range(max_row + max_col - 1)]
-        bdiag = [[] for _ in range(len(fdiag))]
-        min_bdiag = -max_row + 1
-
-        for x in range(max_col):
-            for y in range(max_row):
-                cols[x].append(self.board[y][x])
-                rows[y].append(self.board[y][x])
-                fdiag[x+y].append(self.board[y][x])
-                bdiag[x-y-min_bdiag].append(self.board[y][x])
-
-        return self.inARow(cols) or self.inARow(rows) or self.inARow(fdiag) or self.inARow(bdiag)"""
-
     def payoff(self):
         return self.pay
 
     def get_actions(self):
         if self.start:
-            return list(self.pieces[2])
+            return [(self.size//2-1, self.size//2-1)] # force player to move in the center to start
         else: 
             return list(self.next_moves)
 
@@ -220,6 +194,11 @@ class State:
             to_display += "\n"
 
         print(to_display)
+
+    """
+    def get_pred(self, action):
+        return pHelper(self, action)
+    """
 
     def _compute_hash(self):
         # this may have hash conflicts given that the board size is so large 3^(n^2)
