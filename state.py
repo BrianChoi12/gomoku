@@ -172,7 +172,7 @@ class State:
 
     def get_actions(self):
         if self.start:
-            return [(self.size//2-1, self.size//2-1)] # force player to move in the center to start
+            return [(self.size//2, self.size//2)]  # force player to move in the center to start
         else: 
             return list(self.next_moves)
 
