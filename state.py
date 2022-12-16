@@ -4,7 +4,7 @@ import time
 import random
 
 # Precompute tuple to heuristic evaluation
-sz = 9
+sz = 10
 row_to_heur = dict()
 block = {2:10, 3:200, 4:500, 5:100000}
 unblocked = {2:50, 3:500, 4:4800, 5:100000}
