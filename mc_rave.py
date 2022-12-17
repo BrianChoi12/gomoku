@@ -56,6 +56,8 @@ def traverse(node, nodeDict):
                 
                 node.child.append(nextNode)
                 node.visited.append(0)
+                nextNode.payoff = next_state.heuristic()*10
+                nextNode.times = 10
 
             node.isLeaf = False
             possible = node.child[0]
@@ -127,9 +129,9 @@ def mcts_policy(seconds):
 
         seconds - number of seconds to run for
     """
-    nodeDict = dict()
     NUM_SIMULATE = 1
     def policy(state): 
+        nodeDict = dict()
         if state not in nodeDict:
             nodeDict[state] = myNode(state)
         node = nodeDict[state]
