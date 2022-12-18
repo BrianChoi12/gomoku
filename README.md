@@ -18,11 +18,14 @@ The Gomoku script can be run with arguments
 --count #           The number of games to play (default=2) 
 --time #            The time for each agent per move in seconds (default=2)
 --size #            The size of the Gomoku board, where size is the side length of the square board (default=7) 
+--game              Which agent you wish to play against the baseline ["mcts", "abminimax"] (default="mcts")
 ```
 Note that there is a limit of game board size 10 because in `state.py` precomputation is only done for game boards up to size 10. Changing the `sz` variable can fix this.
 
 ## Results
-The winning percentage of the second agent over the first agent over NUM_GAMES games on an NxN Gomoku board with N seconds to make a move is PERCENT_WIN. The winning percentage of the third agent over the first agent over NUM_GAMES games with N seconds to make a move is PERCENT_WIN.
+The winning percentage of the alpha-beta minimax agent over the baseline agent over 100 games on an 9x9 Gomoku board with either 15 seconds per move OR when depth 2 finished searching is 61%. 
+
+The winning percentage of the third agent over the first agent over NUM_GAMES games with N seconds to make a move is PERCENT_WIN.
 
 ## References
 For the heuristic function, we based our initial weights off of [this poster](https://stanford-cs221.github.io/autumn2019-extra/posters/14.pdf). The MC-RAVE algorithm was based off of [this paper](https://www.sciencedirect.com/science/article/pii/S000437021100052X).

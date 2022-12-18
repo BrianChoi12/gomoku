@@ -30,7 +30,7 @@ def compare_policies(game, p1, p2, games, prob):
         position = game.initial_state()
 
         while not position.is_terminal():
-            position.display()
+            # position.display()
             if random.random() < prob:
                 if position.actor() == i % 2:
                     move = p1_policy(position)
@@ -95,7 +95,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Test MCTS agent")
     parser.add_argument('--count', dest='count', type=int, action="store", default=2, help='number of games to play (default=2)')
     parser.add_argument('--time', dest='time', type=float, action="store", default=2, help='time for MCTS per move in seconds')
-    parser.add_argument('--game', dest="game", choices=["gomoku"], default="gomoku", help="game to play")
+    parser.add_argument('--game', dest="game", choices=["mcts", "abminimax"], default="mcts", help="game to play")
     parser.add_argument('--size', dest='size', type=int, action="store", default=7, help='size of board (default 5)')
 
     args = parser.parse_args()
@@ -107,11 +107,20 @@ if __name__ == '__main__':
             raise MCTSTestError("time must be positive")
 
         game = gomoku(args.size)
-        test_game(game,
-                  args.count,
-                  0,
-                  lambda: mc_rave.mcts_policy(args.time),
-                  lambda: abminimax.abminimax_policy(args.time))
+        if args.game == "mcts":
+            test_game(game,
+                    args.count,
+                    0,
+                    lambda: mc_rave.mcts_policy(args.time),
+                    lambda: abminimax.baseline_policy(args.time))
+        elif args.game == "abminimax":
+            test_game(game,
+                    args.count,
+                    0.1,
+                    lambda: abminimax.abminimax_policy(args.time),
+                    lambda: abminimax.baseline_policy(args.time))
+        else:
+            raise MCTSTestError("agent not in list")
         sys.exit(0)
     except MCTSTestError as err:
         print(sys.argv[0] + ":", str(err))
