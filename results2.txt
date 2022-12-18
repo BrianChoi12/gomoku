@@ -1,0 +1,1101 @@
+Payoff (policy 1 playing as White): -1
+. . . . . . . . . 
+. . [07mO[0m . [07mO[0m O . . . 
+. . . O O . . . . 
+[07mO[0m O O O O [07mO[0m . . . 
+. O O [07mO[0m [07mO[0m O [07mO[0m . . 
+. O . O [07mO[0m [07mO[0m [07mO[0m [07mO[0m O 
+. . . . [07mO[0m [07mO[0m . . . 
+. . . . . . . . . 
+. . . . . . . . . 
+
+Payoff (policy 1 playing as Black): 0
+[07mO[0m [07mO[0m O O O [07mO[0m [07mO[0m [07mO[0m O 
+[07mO[0m O O [07mO[0m O O O O [07mO[0m 
+O [07mO[0m [07mO[0m [07mO[0m O O [07mO[0m [07mO[0m O 
+[07mO[0m O [07mO[0m [07mO[0m O O [07mO[0m O [07mO[0m 
+[07mO[0m O O O [07mO[0m O [07mO[0m [07mO[0m O 
+O [07mO[0m [07mO[0m [07mO[0m O [07mO[0m O O O 
+[07mO[0m O [07mO[0m [07mO[0m [07mO[0m [07mO[0m O O [07mO[0m 
+[07mO[0m O [07mO[0m O O [07mO[0m O [07mO[0m [07mO[0m 
+[07mO[0m O [07mO[0m [07mO[0m O O O [07mO[0m O 
+
+Payoff (policy 1 playing as White): 1
+. . . . . . . . . 
+. . . . O . . . . 
+. [07mO[0m [07mO[0m [07mO[0m . . . . . 
+. . [07mO[0m O O [07mO[0m O . . 
+O [07mO[0m [07mO[0m [07mO[0m [07mO[0m O O . . 
+. . O O [07mO[0m [07mO[0m O . . 
+. . . . . [07mO[0m O O . 
+. . . . . . . . [07mO[0m 
+. . . . . . . . . 
+
+Payoff (policy 1 playing as Black): 1
+. . . . . . . . . 
+. . . . . . . . . 
+. . . . [07mO[0m . . . . 
+. . O [07mO[0m [07mO[0m [07mO[0m [07mO[0m . . 
+. . . O [07mO[0m O . . . 
+. . . . O [07mO[0m . . . 
+. . . . . O O . . 
+. . . . . . O . . 
+. . . . . . . . . 
+
+Payoff (policy 1 playing as White): 1
+. . . O . . . . . 
+. . [07mO[0m [07mO[0m O . . . . 
+. . O [07mO[0m [07mO[0m O . . . 
+. . [07mO[0m [07mO[0m O [07mO[0m O . . 
+. . [07mO[0m [07mO[0m [07mO[0m O [07mO[0m . . 
+. . O O [07mO[0m O O [07mO[0m . 
+. . . . [07mO[0m O O . . 
+. . . . O . . . . 
+. . . [07mO[0m . . . . . 
+
+Payoff (policy 1 playing as Black): 0
+O [07mO[0m O O O [07mO[0m [07mO[0m [07mO[0m O 
+[07mO[0m O O [07mO[0m [07mO[0m [07mO[0m O O [07mO[0m 
+O [07mO[0m [07mO[0m [07mO[0m O O O [07mO[0m [07mO[0m 
+O [07mO[0m O [07mO[0m O [07mO[0m [07mO[0m [07mO[0m O 
+O [07mO[0m [07mO[0m O [07mO[0m O [07mO[0m [07mO[0m O 
+[07mO[0m [07mO[0m [07mO[0m [07mO[0m O [07mO[0m O O O 
+O O O [07mO[0m O [07mO[0m O O [07mO[0m 
+O [07mO[0m [07mO[0m [07mO[0m O [07mO[0m O O [07mO[0m 
+[07mO[0m [07mO[0m O O [07mO[0m O O [07mO[0m O 
+
+Payoff (policy 1 playing as White): -1
+. . . . . . . . . 
+. . . . . . . . . 
+. . . [07mO[0m . . . . . 
+. . [07mO[0m O O O O O . 
+. . . [07mO[0m [07mO[0m O O . . 
+. . . . [07mO[0m [07mO[0m O O . 
+. . . . . . [07mO[0m O . 
+. . . . . . [07mO[0m O [07mO[0m 
+. . . . . . . [07mO[0m [07mO[0m 
+
+Payoff (policy 1 playing as Black): -1
+. . . . . . . . . 
+. [07mO[0m . . . . . . . 
+. . [07mO[0m . . . . . . 
+. . . [07mO[0m O . [07mO[0m . . 
+. . . O [07mO[0m O O . . 
+. . . . O [07mO[0m . . . 
+. . . . . [07mO[0m O . . 
+. . . . . . . . . 
+. . . . . . . . . 
+
+Payoff (policy 1 playing as White): -1
+. . . . . . . . . 
+. . O . O . . . . 
+. . O O O . . . . 
+. . O O O [07mO[0m [07mO[0m . . 
+. [07mO[0m O [07mO[0m [07mO[0m O [07mO[0m . . 
+. [07mO[0m O O [07mO[0m [07mO[0m [07mO[0m [07mO[0m O 
+. . [07mO[0m . . [07mO[0m . . . 
+. . . . . . . . . 
+. . . . . . . . . 
+
+Payoff (policy 1 playing as Black): 0
+[07mO[0m [07mO[0m O [07mO[0m O O O [07mO[0m O 
+O O O [07mO[0m [07mO[0m [07mO[0m O O O 
+O [07mO[0m [07mO[0m [07mO[0m [07mO[0m O [07mO[0m [07mO[0m [07mO[0m 
+O [07mO[0m O [07mO[0m O O [07mO[0m O O 
+[07mO[0m O O O [07mO[0m O O [07mO[0m O 
+O [07mO[0m [07mO[0m [07mO[0m O [07mO[0m O O [07mO[0m 
+[07mO[0m [07mO[0m O [07mO[0m [07mO[0m [07mO[0m O O [07mO[0m 
+[07mO[0m O O [07mO[0m [07mO[0m [07mO[0m [07mO[0m O [07mO[0m 
+[07mO[0m O [07mO[0m O O O [07mO[0m [07mO[0m O 
+
+Payoff (policy 1 playing as White): -1
+. . . . . . . . . 
+. . . . . . . . . 
+. . . O . . . . . 
+. . [07mO[0m O O . . . . 
+. [07mO[0m . [07mO[0m [07mO[0m O . . . 
+. . . . [07mO[0m [07mO[0m O . . 
+. . . . . . . O . 
+. . . . . . . . . 
+. . . . . . . . . 
+
+Payoff (policy 1 playing as Black): -1
+. . . . . . . . . 
+. . . . . . . . . 
+. . . . O O . . . 
+. . . [07mO[0m . O . . . 
+. [07mO[0m [07mO[0m [07mO[0m [07mO[0m [07mO[0m O . . 
+. . . [07mO[0m . O . . . 
+. . . O . . . . . 
+. . . . . . . . . 
+. . . . . . . . . 
+
+Payoff (policy 1 playing as White): 1
+. . . . . . . . . 
+. . . . . . . . . 
+. . . . O . . . . 
+. [07mO[0m O O [07mO[0m O . . . 
+. [07mO[0m O [07mO[0m [07mO[0m O . . . 
+. [07mO[0m O [07mO[0m [07mO[0m O . . . 
+O [07mO[0m [07mO[0m [07mO[0m [07mO[0m O . . . 
+. [07mO[0m . . O . . . . 
+O . . . . . . . . 
+
+Payoff (policy 1 playing as Black): -1
+. . . . . . . . . 
+. . . . . . . . . 
+. . [07mO[0m . . . . . . 
+. . . [07mO[0m . . . . . 
+. . O . [07mO[0m O . . . 
+. . . . O [07mO[0m . . . 
+. . . . . . [07mO[0m O . 
+. . . . . . . . . 
+. . . . . . . . . 
+
+Payoff (policy 1 playing as White): 1
+. . . . . . . . . 
+. . . . . . . . . 
+. . [07mO[0m O . . . . . 
+. . . O O . . . . 
+. . . O [07mO[0m O . . . 
+. . . O [07mO[0m [07mO[0m [07mO[0m [07mO[0m [07mO[0m 
+. . . . . . . . . 
+. . . . . . . . . 
+. . . . . . . . . 
+
+Payoff (policy 1 playing as Black): -1
+. . . . . . . . . 
+. [07mO[0m . . . . . . . 
+. . [07mO[0m . . [07mO[0m . . . 
+. . . [07mO[0m . O [07mO[0m . . 
+. . . O [07mO[0m O . [07mO[0m . 
+. . . . O [07mO[0m [07mO[0m . O 
+. . . O . [07mO[0m O O . 
+. . . . O . . . . 
+. . . . . . . . . 
+
+Payoff (policy 1 playing as White): 1
+. . . . . . . . . 
+. . . . . . . . . 
+. O [07mO[0m O [07mO[0m O . . O 
+[07mO[0m [07mO[0m [07mO[0m O O O O [07mO[0m . 
+O [07mO[0m [07mO[0m [07mO[0m [07mO[0m O [07mO[0m O . 
+. . [07mO[0m O [07mO[0m [07mO[0m [07mO[0m O . 
+. . O [07mO[0m O O O [07mO[0m . 
+. . . [07mO[0m [07mO[0m O [07mO[0m . . 
+. . . . O . . . . 
+
+Payoff (policy 1 playing as Black): 1
+. . . . . . . . . 
+. O . . . O [07mO[0m [07mO[0m [07mO[0m 
+. . [07mO[0m O [07mO[0m O O O . 
+. . O [07mO[0m [07mO[0m [07mO[0m O O . 
+. . [07mO[0m O [07mO[0m O O [07mO[0m . 
+. . [07mO[0m [07mO[0m O [07mO[0m [07mO[0m . . 
+[07mO[0m O [07mO[0m [07mO[0m [07mO[0m O O . . 
+. O O O [07mO[0m . O . . 
+. . . . . . . . . 
+
+Payoff (policy 1 playing as White): 1
+. . . . . . . . . 
+. . . . O . . . . 
+. O [07mO[0m O O O [07mO[0m . . 
+. . O O O [07mO[0m O O . 
+. . [07mO[0m [07mO[0m [07mO[0m O [07mO[0m . . 
+. . . O [07mO[0m [07mO[0m [07mO[0m [07mO[0m O 
+. . . [07mO[0m [07mO[0m [07mO[0m [07mO[0m [07mO[0m . 
+. . . . [07mO[0m . O . . 
+. . . . O O . . . 
+
+Payoff (policy 1 playing as Black): 1
+. [07mO[0m . . . . . . . 
+. O . . . . . . . 
+. . [07mO[0m O [07mO[0m O . . . 
+. . [07mO[0m [07mO[0m O O [07mO[0m . . 
+. . O O [07mO[0m O O . . 
+. . [07mO[0m [07mO[0m O [07mO[0m O . . 
+. [07mO[0m . O [07mO[0m [07mO[0m O O . 
+. . . . . [07mO[0m . . . 
+. . . . . . . . . 
+
+Payoff (policy 1 playing as White): -1
+. . . . . . . . . 
+. . . . . O . . . 
+. . O [07mO[0m O [07mO[0m . . . 
+. . . O [07mO[0m [07mO[0m . O . 
+. . O [07mO[0m [07mO[0m [07mO[0m [07mO[0m O . 
+. O . O O [07mO[0m . . . 
+. . . [07mO[0m [07mO[0m O . . . 
+. . . [07mO[0m . . . . . 
+. . O . . . . . . 
+
+Payoff (policy 1 playing as Black): 1
+. O . . . [07mO[0m . [07mO[0m . 
+[07mO[0m O O [07mO[0m O O O [07mO[0m . 
+. [07mO[0m [07mO[0m O [07mO[0m O [07mO[0m O . 
+. O [07mO[0m [07mO[0m O O [07mO[0m O . 
+. . O O [07mO[0m O [07mO[0m O . 
+. . [07mO[0m O O [07mO[0m [07mO[0m [07mO[0m . 
+. . . O O [07mO[0m O [07mO[0m . 
+. . . O [07mO[0m [07mO[0m [07mO[0m O . 
+. . . [07mO[0m . . . . . 
+
+Payoff (policy 1 playing as White): 1
+. . . [07mO[0m [07mO[0m [07mO[0m [07mO[0m [07mO[0m . 
+. . . [07mO[0m [07mO[0m O . . . 
+. . [07mO[0m [07mO[0m O O O . . 
+. [07mO[0m O O O O [07mO[0m O . 
+O . [07mO[0m O [07mO[0m O O [07mO[0m O 
+. . [07mO[0m O [07mO[0m [07mO[0m [07mO[0m [07mO[0m O 
+. [07mO[0m O O O O [07mO[0m [07mO[0m O 
+. . . [07mO[0m . . . [07mO[0m O 
+. . O . . . . . . 
+
+Payoff (policy 1 playing as Black): 1
+. . . . O [07mO[0m O . . 
+[07mO[0m O O O [07mO[0m [07mO[0m [07mO[0m [07mO[0m O 
+O [07mO[0m [07mO[0m [07mO[0m [07mO[0m O [07mO[0m [07mO[0m . 
+O [07mO[0m O [07mO[0m O O [07mO[0m [07mO[0m O 
+O O O O [07mO[0m O O O [07mO[0m 
+[07mO[0m O [07mO[0m [07mO[0m O [07mO[0m O O [07mO[0m 
+. O . [07mO[0m [07mO[0m [07mO[0m O O [07mO[0m 
+. O . [07mO[0m O [07mO[0m O [07mO[0m [07mO[0m 
+. O . . . . [07mO[0m . O 
+
+Payoff (policy 1 playing as White): -1
+. . . . . . . . . 
+. . . . . . . . . 
+. . . O . . . . . 
+. . O O O . [07mO[0m . . 
+. . [07mO[0m [07mO[0m [07mO[0m O . . . 
+. . . . [07mO[0m [07mO[0m O . . 
+. . . . . [07mO[0m . O . 
+. . . . . . . . . 
+. . . . . . . . . 
+
+Payoff (policy 1 playing as Black): -1
+. . . . . . . . . 
+. . . . . . . . . 
+. . [07mO[0m . . . . . . 
+. . . [07mO[0m . . . . . 
+. . . O [07mO[0m O . . . 
+. . . . O [07mO[0m . . . 
+. . . . O . [07mO[0m . . 
+. . . . . . . . . 
+. . . . . . . . . 
+
+Payoff (policy 1 playing as White): 1
+. . . . . . . . . 
+. . . [07mO[0m O O . . . 
+. . O [07mO[0m O [07mO[0m [07mO[0m . . 
+. O [07mO[0m O [07mO[0m [07mO[0m [07mO[0m . . 
+O [07mO[0m [07mO[0m [07mO[0m [07mO[0m O O O . 
+. O [07mO[0m [07mO[0m [07mO[0m [07mO[0m O O . 
+. O O O [07mO[0m [07mO[0m O [07mO[0m . 
+. [07mO[0m O [07mO[0m O O [07mO[0m O . 
+. . . . O [07mO[0m . . . 
+
+Payoff (policy 1 playing as Black): 0
+[07mO[0m [07mO[0m O O O [07mO[0m [07mO[0m [07mO[0m [07mO[0m 
+O O O [07mO[0m O [07mO[0m [07mO[0m O O 
+O [07mO[0m [07mO[0m [07mO[0m [07mO[0m O O O [07mO[0m 
+O O [07mO[0m [07mO[0m O [07mO[0m [07mO[0m O [07mO[0m 
+[07mO[0m O O O [07mO[0m O O O [07mO[0m 
+O [07mO[0m [07mO[0m O O [07mO[0m [07mO[0m [07mO[0m O 
+[07mO[0m O O O [07mO[0m [07mO[0m O [07mO[0m O 
+[07mO[0m O [07mO[0m O O [07mO[0m [07mO[0m O [07mO[0m 
+[07mO[0m O [07mO[0m [07mO[0m O O O [07mO[0m [07mO[0m 
+
+Payoff (policy 1 playing as White): 1
+. . . . . . . . . 
+. . . [07mO[0m . . . . . 
+. . [07mO[0m O [07mO[0m O . . . 
+. . O O O [07mO[0m O . . 
+. . O [07mO[0m [07mO[0m O [07mO[0m O . 
+. . . O [07mO[0m [07mO[0m [07mO[0m [07mO[0m O 
+. . . [07mO[0m O O [07mO[0m [07mO[0m . 
+. . . . . . . . . 
+. . . . . . . . . 
+
+Payoff (policy 1 playing as Black): -1
+. . . . . . . [07mO[0m . 
+. O . . . . O . . 
+. [07mO[0m [07mO[0m [07mO[0m O O O . [07mO[0m 
+. . . [07mO[0m O . [07mO[0m [07mO[0m . 
+. . O O [07mO[0m O [07mO[0m . . 
+. . [07mO[0m O O [07mO[0m O . . 
+. . . . [07mO[0m [07mO[0m O O . 
+. . . . . [07mO[0m O . [07mO[0m 
+. . . . . . . . . 
+
+Payoff (policy 1 playing as White): 1
+. . . . . . . . . 
+. . . . . . . . . 
+. . . O . . . . . 
+. O O O O [07mO[0m . . . 
+. . . [07mO[0m [07mO[0m O . . . 
+. . . O [07mO[0m [07mO[0m [07mO[0m [07mO[0m [07mO[0m 
+. . . . . . . . . 
+. . . . . . . . . 
+. . . . . . . . . 
+
+Payoff (policy 1 playing as Black): -1
+. [07mO[0m . . . . . O . 
+. O O [07mO[0m O . . . [07mO[0m 
+[07mO[0m O O O O [07mO[0m . O . 
+. O O [07mO[0m O . O [07mO[0m . 
+O [07mO[0m [07mO[0m [07mO[0m [07mO[0m O [07mO[0m O . 
+. [07mO[0m [07mO[0m [07mO[0m O [07mO[0m [07mO[0m [07mO[0m . 
+. . [07mO[0m [07mO[0m O O [07mO[0m . [07mO[0m 
+. O [07mO[0m O O [07mO[0m O O . 
+. . [07mO[0m . . . . . . 
+
+Payoff (policy 1 playing as White): 1
+. . [07mO[0m O . . . . . 
+. . O [07mO[0m O [07mO[0m . . . 
+. . O [07mO[0m [07mO[0m O . . . 
+. . O [07mO[0m [07mO[0m O [07mO[0m . . 
+. . O [07mO[0m [07mO[0m O O . . 
+. . [07mO[0m O O [07mO[0m O O . 
+. [07mO[0m [07mO[0m [07mO[0m [07mO[0m [07mO[0m O . . 
+O . . . . . . . . 
+. . . . . . . . . 
+
+Payoff (policy 1 playing as Black): 0
+[07mO[0m [07mO[0m [07mO[0m O O O [07mO[0m [07mO[0m [07mO[0m 
+O O O [07mO[0m [07mO[0m [07mO[0m O O O 
+O [07mO[0m [07mO[0m [07mO[0m O O [07mO[0m O O 
+O [07mO[0m [07mO[0m [07mO[0m O [07mO[0m [07mO[0m [07mO[0m O 
+[07mO[0m O O O [07mO[0m O [07mO[0m [07mO[0m O 
+O [07mO[0m [07mO[0m O O [07mO[0m O O [07mO[0m 
+O [07mO[0m O O O [07mO[0m O O [07mO[0m 
+[07mO[0m O [07mO[0m [07mO[0m O [07mO[0m O O [07mO[0m 
+[07mO[0m O [07mO[0m [07mO[0m [07mO[0m O [07mO[0m [07mO[0m O 
+
+Payoff (policy 1 playing as White): 0
+O O [07mO[0m [07mO[0m O [07mO[0m [07mO[0m [07mO[0m O 
+[07mO[0m [07mO[0m O [07mO[0m O O O [07mO[0m [07mO[0m 
+[07mO[0m [07mO[0m O [07mO[0m O O O O [07mO[0m 
+O O O O [07mO[0m [07mO[0m O [07mO[0m O 
+O [07mO[0m [07mO[0m [07mO[0m [07mO[0m O [07mO[0m [07mO[0m O 
+O O [07mO[0m [07mO[0m [07mO[0m [07mO[0m O [07mO[0m [07mO[0m 
+[07mO[0m O O [07mO[0m O [07mO[0m O O O 
+O O [07mO[0m [07mO[0m [07mO[0m O O [07mO[0m [07mO[0m 
+O [07mO[0m [07mO[0m O O O [07mO[0m O [07mO[0m 
+
+Payoff (policy 1 playing as Black): -1
+. . . . . . . . . 
+. . O . . . . . . 
+. . [07mO[0m . . . . . . 
+. . O [07mO[0m . . . . . 
+. . . . [07mO[0m O . . . 
+. . . . O [07mO[0m . . . 
+. . . . . . [07mO[0m . . 
+. . . . . . . . . 
+. . . . . . . . . 
+
+Payoff (policy 1 playing as White): 1
+. . . . . . O O . 
+. . . O . . [07mO[0m O . 
+. . . O O [07mO[0m [07mO[0m . . 
+. . . O [07mO[0m [07mO[0m [07mO[0m [07mO[0m O 
+. . . O [07mO[0m O [07mO[0m O . 
+. [07mO[0m [07mO[0m [07mO[0m [07mO[0m [07mO[0m O [07mO[0m . 
+. . O . O . [07mO[0m O . 
+. . . . . . . . . 
+. . . . . . . . . 
+
+Payoff (policy 1 playing as Black): -1
+. [07mO[0m . . . . . . . 
+. O . . . . . . . 
+. . [07mO[0m . . . . . . 
+[07mO[0m [07mO[0m [07mO[0m [07mO[0m [07mO[0m O [07mO[0m . . 
+. . O . [07mO[0m O [07mO[0m . . 
+. O . . O [07mO[0m O O . 
+. . . . O [07mO[0m O . . 
+. . . . . O . . . 
+. . . . . . . . . 
+
+Payoff (policy 1 playing as White): -1
+. . . . . . . . . 
+. . . . . . . . . 
+. . . O . O . . . 
+. . [07mO[0m O O [07mO[0m . . . 
+. . . O [07mO[0m O . . . 
+. . O [07mO[0m [07mO[0m [07mO[0m [07mO[0m O . 
+. O . . [07mO[0m . . . . 
+. . . . . [07mO[0m . . . 
+. . . . . . . . . 
+
+Payoff (policy 1 playing as Black): 1
+. [07mO[0m . . . . . . . 
+. O . . . . . . . 
+. O [07mO[0m O [07mO[0m O O . . 
+. [07mO[0m [07mO[0m [07mO[0m O O [07mO[0m . . 
+. O [07mO[0m [07mO[0m [07mO[0m [07mO[0m O . . 
+. . O [07mO[0m [07mO[0m [07mO[0m O . . 
+. . O O O O O [07mO[0m . 
+. . . . [07mO[0m . O . . 
+. . . . . . [07mO[0m . . 
+
+Payoff (policy 1 playing as White): 1
+. . . . . . . . . 
+. . . . [07mO[0m . . . . 
+. . [07mO[0m O O O . . . 
+. O O O O [07mO[0m O O . 
+. . O [07mO[0m [07mO[0m O [07mO[0m O . 
+. . O O [07mO[0m [07mO[0m [07mO[0m [07mO[0m O 
+. . [07mO[0m [07mO[0m [07mO[0m O [07mO[0m [07mO[0m . 
+. . . [07mO[0m [07mO[0m [07mO[0m [07mO[0m [07mO[0m . 
+. . . . O . O . O 
+
+Payoff (policy 1 playing as Black): 1
+. . . . . . . [07mO[0m . 
+. . . . [07mO[0m . O . . 
+. . O . . O . [07mO[0m . 
+[07mO[0m [07mO[0m [07mO[0m [07mO[0m O [07mO[0m O . . 
+. . [07mO[0m O [07mO[0m O O O . 
+. . [07mO[0m O O [07mO[0m [07mO[0m [07mO[0m . 
+. . [07mO[0m [07mO[0m [07mO[0m O O O . 
+. . . [07mO[0m O O O O O 
+. . . . . . . [07mO[0m . 
+
+Payoff (policy 1 playing as White): 1
+. . . . . . . . . 
+. . . [07mO[0m . . . . . 
+. . O O [07mO[0m O O [07mO[0m . 
+. . O O O [07mO[0m O . . 
+. . O [07mO[0m [07mO[0m O [07mO[0m O . 
+. . . O [07mO[0m [07mO[0m [07mO[0m [07mO[0m O 
+. . . [07mO[0m [07mO[0m [07mO[0m O [07mO[0m . 
+. . . . . . . . . 
+. . . . . . . . . 
+
+Payoff (policy 1 playing as Black): -1
+. . . . . . . . . 
+. . . . . . . . . 
+. . [07mO[0m . O . . . . 
+. . . [07mO[0m . . . . . 
+. . . O [07mO[0m O . . . 
+. . . . O [07mO[0m . . . 
+. . . . . . [07mO[0m . . 
+. . . . . . . . . 
+. . . . . . . . . 
+
+Payoff (policy 1 playing as White): -1
+. . . . . . . . . 
+. . . . O . . . . 
+. [07mO[0m . O [07mO[0m O . . . 
+[07mO[0m O O O O [07mO[0m O . . 
+. [07mO[0m O [07mO[0m [07mO[0m O O [07mO[0m [07mO[0m 
+. . . O [07mO[0m [07mO[0m [07mO[0m [07mO[0m O 
+. . . . O [07mO[0m [07mO[0m . . 
+. . . . . O . [07mO[0m . 
+. . . . . . . . O 
+
+Payoff (policy 1 playing as Black): 1
+. . . . . . [07mO[0m . . 
+. O [07mO[0m . . . [07mO[0m O . 
+. [07mO[0m [07mO[0m [07mO[0m [07mO[0m O [07mO[0m . . 
+. . [07mO[0m [07mO[0m O [07mO[0m [07mO[0m . . 
+. . O [07mO[0m [07mO[0m O O [07mO[0m . 
+. . . O O [07mO[0m O O . 
+. . . [07mO[0m O O O O . 
+. . . . . . O O [07mO[0m 
+. . . . . . O . . 
+
+Payoff (policy 1 playing as White): 1
+. . . . . . . . . 
+. . . . . . . . . 
+. . . . . . . . . 
+. . . O [07mO[0m O [07mO[0m . . 
+. . . O [07mO[0m O [07mO[0m . . 
+. . . O [07mO[0m [07mO[0m [07mO[0m . . 
+. . . . [07mO[0m O [07mO[0m . . 
+. . . . [07mO[0m O O O . 
+. . . . . . . . . 
+
+Payoff (policy 1 playing as Black): 1
+. [07mO[0m . . . [07mO[0m . . . 
+[07mO[0m O O O O . [07mO[0m . . 
+. [07mO[0m O O O O O . . 
+. . O [07mO[0m O O [07mO[0m . . 
+. O [07mO[0m O [07mO[0m O [07mO[0m . . 
+[07mO[0m [07mO[0m [07mO[0m [07mO[0m O [07mO[0m [07mO[0m . . 
+. . . O [07mO[0m [07mO[0m O O . 
+. . . . . [07mO[0m [07mO[0m O . 
+. . . . . . . . . 
+
+Payoff (policy 1 playing as White): 1
+. . . . . . . . . 
+. . . O [07mO[0m [07mO[0m . . . 
+. . [07mO[0m [07mO[0m O O . . . 
+. . O [07mO[0m [07mO[0m O O . . 
+. . [07mO[0m O [07mO[0m O O . . 
+. . [07mO[0m O [07mO[0m [07mO[0m . . . 
+. O . . . . [07mO[0m . . 
+. . . . . . . . . 
+. . . . . . . . . 
+
+Payoff (policy 1 playing as Black): 0
+O [07mO[0m O O [07mO[0m O [07mO[0m [07mO[0m O 
+[07mO[0m O [07mO[0m [07mO[0m [07mO[0m [07mO[0m O [07mO[0m [07mO[0m 
+O [07mO[0m [07mO[0m [07mO[0m O O O O [07mO[0m 
+O [07mO[0m O [07mO[0m O O [07mO[0m [07mO[0m [07mO[0m 
+O [07mO[0m [07mO[0m O [07mO[0m O [07mO[0m [07mO[0m O 
+[07mO[0m [07mO[0m [07mO[0m O O [07mO[0m O O O 
+[07mO[0m O [07mO[0m [07mO[0m O [07mO[0m O O [07mO[0m 
+[07mO[0m O O [07mO[0m O [07mO[0m O O [07mO[0m 
+O O [07mO[0m O O O [07mO[0m [07mO[0m O 
+
+Payoff (policy 1 playing as White): 1
+. . . . . . . . . 
+O . . . . . . . . 
+. [07mO[0m [07mO[0m [07mO[0m [07mO[0m [07mO[0m . . . 
+. . [07mO[0m [07mO[0m O O . . . 
+. . O [07mO[0m [07mO[0m O . . . 
+. . . O [07mO[0m O O . . 
+. . . . . O . . . 
+. . . . . . . . . 
+. . . . . . . . . 
+
+Payoff (policy 1 playing as Black): -1
+. . . . O O . . . 
+. . . . [07mO[0m . . . . 
+. . [07mO[0m [07mO[0m [07mO[0m [07mO[0m [07mO[0m . . 
+. . [07mO[0m [07mO[0m [07mO[0m O [07mO[0m . . 
+. . . O [07mO[0m O O . . 
+. . . O O [07mO[0m O . . 
+. . . . O O O . . 
+. . . . . . O . . 
+. . . . . . [07mO[0m [07mO[0m . 
+
+Payoff (policy 1 playing as White): -1
+. . . . . . . . . 
+. . . . O . . . . 
+. O O O O O . . . 
+. . O O O [07mO[0m [07mO[0m . . 
+. [07mO[0m O [07mO[0m [07mO[0m O [07mO[0m . . 
+. [07mO[0m [07mO[0m O [07mO[0m [07mO[0m [07mO[0m [07mO[0m O 
+. . . . . [07mO[0m . . . 
+. . . . . . . . . 
+. . . . . . . . . 
+
+Payoff (policy 1 playing as Black): -1
+. . . . . . . [07mO[0m . 
+. O . . . . O . . 
+O [07mO[0m [07mO[0m [07mO[0m O O O O [07mO[0m 
+. . . [07mO[0m O . [07mO[0m [07mO[0m . 
+. . . O [07mO[0m O [07mO[0m . . 
+. . [07mO[0m . O [07mO[0m O . . 
+. . . . [07mO[0m [07mO[0m O O . 
+. . . . . [07mO[0m O . [07mO[0m 
+. . . . . . . . . 
+
+Payoff (policy 1 playing as White): -1
+. . . . . . . . . 
+. . . . [07mO[0m . . O . 
+. . O [07mO[0m [07mO[0m [07mO[0m [07mO[0m O . 
+. . . O O [07mO[0m O O . 
+. . . O [07mO[0m O O O . 
+. . . [07mO[0m [07mO[0m [07mO[0m O O . 
+. . O . . [07mO[0m [07mO[0m O . 
+. . . . . . [07mO[0m . [07mO[0m 
+. . . . . . [07mO[0m . . 
+
+Payoff (policy 1 playing as Black): -1
+. . . . . O . . . 
+. . . [07mO[0m . . [07mO[0m . . 
+. . . O . O . . . 
+. . . O O . [07mO[0m . O 
+. . . O [07mO[0m O O [07mO[0m . 
+. . O O O [07mO[0m [07mO[0m [07mO[0m . 
+. [07mO[0m [07mO[0m [07mO[0m [07mO[0m [07mO[0m . . . 
+. . . . [07mO[0m . . . . 
+. . . O . . . . . 
+
+Payoff (policy 1 playing as White): -1
+. O . . . . . . O 
+. [07mO[0m O . [07mO[0m . . [07mO[0m . 
+[07mO[0m O O O . . [07mO[0m . . 
+[07mO[0m O O O O [07mO[0m . . . 
+. O . [07mO[0m [07mO[0m O [07mO[0m . . 
+. . . O [07mO[0m [07mO[0m [07mO[0m O . 
+. . . . [07mO[0m . . . . 
+. . . . [07mO[0m . . . . 
+. . . . O . . . . 
+
+Payoff (policy 1 playing as Black): 0
+O [07mO[0m [07mO[0m [07mO[0m O [07mO[0m [07mO[0m [07mO[0m [07mO[0m 
+[07mO[0m O O O [07mO[0m O O O [07mO[0m 
+[07mO[0m [07mO[0m [07mO[0m [07mO[0m O O O O [07mO[0m 
+O [07mO[0m O [07mO[0m O O [07mO[0m [07mO[0m O 
+O [07mO[0m O O [07mO[0m O [07mO[0m [07mO[0m O 
+[07mO[0m O [07mO[0m O O [07mO[0m O [07mO[0m O 
+[07mO[0m O [07mO[0m O O [07mO[0m O O [07mO[0m 
+O [07mO[0m [07mO[0m [07mO[0m O [07mO[0m O O [07mO[0m 
+[07mO[0m [07mO[0m O O [07mO[0m [07mO[0m [07mO[0m O O 
+
+Payoff (policy 1 playing as White): -1
+. . . . . . . . . 
+. . . . . . . . . 
+. . . . . . . . . 
+. . O O O O O . . 
+. . . [07mO[0m [07mO[0m O [07mO[0m . . 
+. . . O [07mO[0m [07mO[0m [07mO[0m . . 
+. . . . . [07mO[0m . . . 
+. . . . . . . . . 
+. . . . . . . . . 
+
+Payoff (policy 1 playing as Black): 0
+[07mO[0m O [07mO[0m O O O [07mO[0m [07mO[0m [07mO[0m 
+O O O [07mO[0m [07mO[0m [07mO[0m O [07mO[0m [07mO[0m 
+O [07mO[0m [07mO[0m [07mO[0m O O O O [07mO[0m 
+O O [07mO[0m [07mO[0m O O [07mO[0m [07mO[0m O 
+[07mO[0m O [07mO[0m O [07mO[0m O [07mO[0m [07mO[0m O 
+[07mO[0m O [07mO[0m O O [07mO[0m O O [07mO[0m 
+[07mO[0m [07mO[0m O [07mO[0m O [07mO[0m O O [07mO[0m 
+O O O [07mO[0m O [07mO[0m O O [07mO[0m 
+[07mO[0m [07mO[0m O [07mO[0m [07mO[0m O [07mO[0m [07mO[0m O 
+
+Payoff (policy 1 playing as White): -1
+. O . . . . . . . 
+. . O O . . . . . 
+. . . O [07mO[0m . [07mO[0m . . 
+. . . [07mO[0m O [07mO[0m O [07mO[0m . 
+. . . . [07mO[0m O [07mO[0m . . 
+. . . O [07mO[0m O [07mO[0m [07mO[0m . 
+. . . . . O [07mO[0m . O 
+. . . . . [07mO[0m O . . 
+. . . . . . . . . 
+
+Payoff (policy 1 playing as Black): 0
+O O O O [07mO[0m [07mO[0m O [07mO[0m [07mO[0m 
+[07mO[0m O [07mO[0m [07mO[0m O O [07mO[0m O O 
+[07mO[0m [07mO[0m [07mO[0m [07mO[0m O O O [07mO[0m O 
+[07mO[0m O [07mO[0m [07mO[0m O [07mO[0m [07mO[0m [07mO[0m O 
+[07mO[0m [07mO[0m O O [07mO[0m O [07mO[0m [07mO[0m [07mO[0m 
+O O [07mO[0m O O [07mO[0m O O O 
+O [07mO[0m [07mO[0m O O [07mO[0m O O [07mO[0m 
+O [07mO[0m [07mO[0m O O [07mO[0m O [07mO[0m [07mO[0m 
+[07mO[0m O O [07mO[0m [07mO[0m O [07mO[0m [07mO[0m O 
+
+Payoff (policy 1 playing as White): 1
+. . . . . . . . . 
+. . . . . . . . . 
+. . [07mO[0m O O [07mO[0m . . . 
+. . O O O [07mO[0m O O . 
+. . O [07mO[0m [07mO[0m O [07mO[0m [07mO[0m . 
+. . O O [07mO[0m [07mO[0m [07mO[0m [07mO[0m O 
+. . O [07mO[0m [07mO[0m O [07mO[0m O . 
+. . . [07mO[0m [07mO[0m [07mO[0m [07mO[0m [07mO[0m . 
+. . . . O . O . O 
+
+Payoff (policy 1 playing as Black): -1
+. . . . . . . O O 
+. . [07mO[0m O O [07mO[0m [07mO[0m [07mO[0m O 
+. . O O O [07mO[0m [07mO[0m [07mO[0m [07mO[0m 
+[07mO[0m O O O O [07mO[0m [07mO[0m [07mO[0m O 
+. [07mO[0m O [07mO[0m [07mO[0m O O [07mO[0m O 
+. [07mO[0m O O O [07mO[0m O O O 
+. . [07mO[0m O [07mO[0m O [07mO[0m [07mO[0m [07mO[0m 
+. . [07mO[0m O O [07mO[0m O O . 
+. [07mO[0m [07mO[0m [07mO[0m [07mO[0m [07mO[0m . . . 
+
+Payoff (policy 1 playing as White): 1
+. . . . . . . . . 
+. . . [07mO[0m . [07mO[0m . . . 
+. . . [07mO[0m O O O O . 
+. . [07mO[0m [07mO[0m [07mO[0m O O . . 
+. . O [07mO[0m [07mO[0m O [07mO[0m . . 
+. O [07mO[0m [07mO[0m [07mO[0m [07mO[0m O . . 
+O . [07mO[0m O [07mO[0m [07mO[0m O . . 
+. . . O O [07mO[0m O . . 
+. . . . . . . . . 
+
+Payoff (policy 1 playing as Black): -1
+. . . . . . . . . 
+. . . . . . . . . 
+. . . . . . . . . 
+. . . [07mO[0m O . [07mO[0m [07mO[0m . 
+. . . [07mO[0m [07mO[0m O [07mO[0m O . 
+. . . . O [07mO[0m [07mO[0m . . 
+. . . O [07mO[0m O O [07mO[0m . 
+. . . [07mO[0m . O O . . 
+. . . O . . . . . 
+
+Payoff (policy 1 playing as White): 1
+. . . . . . . . . 
+. . . . [07mO[0m . . . . 
+. . [07mO[0m O O O . . . 
+. . O O O [07mO[0m O O . 
+. . O [07mO[0m [07mO[0m O [07mO[0m O . 
+. . O O [07mO[0m [07mO[0m [07mO[0m [07mO[0m O 
+. . O [07mO[0m [07mO[0m O [07mO[0m [07mO[0m . 
+. . . [07mO[0m [07mO[0m [07mO[0m [07mO[0m [07mO[0m . 
+. . . [07mO[0m O . O . O 
+
+Payoff (policy 1 playing as Black): -1
+. . . . . . . . . 
+. O . . . . . . . 
+. . [07mO[0m . . [07mO[0m . . . 
+. . . [07mO[0m O O [07mO[0m [07mO[0m . 
+. [07mO[0m . O [07mO[0m O O O O 
+O O O [07mO[0m O [07mO[0m [07mO[0m . . 
+. O O O [07mO[0m [07mO[0m O . . 
+[07mO[0m O [07mO[0m [07mO[0m [07mO[0m [07mO[0m [07mO[0m . . 
+. . . . . . . . . 
+
+Payoff (policy 1 playing as White): -1
+. . . . . . . . . 
+. . . . . . . . . 
+. . . . . . . . . 
+O O O O O [07mO[0m . . . 
+. [07mO[0m . [07mO[0m [07mO[0m O . . . 
+. . . O [07mO[0m [07mO[0m [07mO[0m . . 
+. . . . . . . . . 
+. . . . . . . . . 
+. . . . . . . . . 
+
+Payoff (policy 1 playing as Black): -1
+. . . . O . . [07mO[0m . 
+. O . [07mO[0m [07mO[0m [07mO[0m O . . 
+O [07mO[0m [07mO[0m [07mO[0m O O O O [07mO[0m 
+. [07mO[0m O [07mO[0m O O [07mO[0m [07mO[0m . 
+O . O O [07mO[0m O [07mO[0m O [07mO[0m 
+. O [07mO[0m [07mO[0m O [07mO[0m O . [07mO[0m 
+. [07mO[0m O O O [07mO[0m O O [07mO[0m 
+. [07mO[0m O O O [07mO[0m O . [07mO[0m 
+. [07mO[0m O [07mO[0m [07mO[0m [07mO[0m [07mO[0m O [07mO[0m 
+
+Payoff (policy 1 playing as White): 1
+. . . . O . . . [07mO[0m 
+. [07mO[0m . . [07mO[0m . . [07mO[0m . 
+. O O O O [07mO[0m [07mO[0m . . 
+[07mO[0m O O O O [07mO[0m [07mO[0m . . 
+. O [07mO[0m [07mO[0m [07mO[0m O O . . 
+. . . O [07mO[0m [07mO[0m [07mO[0m O . 
+. . . . [07mO[0m O O . . 
+. . . . [07mO[0m . . . . 
+. . . . . . . . . 
+
+Payoff (policy 1 playing as Black): 1
+. . . . . . . . . 
+. . . . . . . . . 
+. . [07mO[0m O . . . . . 
+. . [07mO[0m [07mO[0m O O O . . 
+. . . [07mO[0m [07mO[0m O [07mO[0m . O 
+. . . [07mO[0m O [07mO[0m O [07mO[0m . 
+. . . O O [07mO[0m O O . 
+. . . . . . . [07mO[0m . 
+. . . . . . . [07mO[0m . 
+
+Payoff (policy 1 playing as White): 1
+. . . . . . . . . 
+. . . . . . . . . 
+. . O O O [07mO[0m . . [07mO[0m 
+. O O O O [07mO[0m O O . 
+. . [07mO[0m [07mO[0m [07mO[0m O [07mO[0m [07mO[0m . 
+. . O O [07mO[0m [07mO[0m [07mO[0m [07mO[0m O 
+. . [07mO[0m O [07mO[0m O [07mO[0m O . 
+. . . [07mO[0m [07mO[0m [07mO[0m [07mO[0m [07mO[0m . 
+. . . . O . O . O 
+
+Payoff (policy 1 playing as Black): 1
+. . . . . . . . . 
+. O . . . . . . . 
+. . [07mO[0m . . . . . . 
+. . . [07mO[0m [07mO[0m [07mO[0m [07mO[0m . . 
+. . . [07mO[0m [07mO[0m O . [07mO[0m . 
+. . . O O [07mO[0m . . . 
+. . . O O O O O . 
+. . . . . . . . . 
+. . . . . . . . . 
+
+Payoff (policy 1 playing as White): 1
+. . . . . . . . . 
+. . . . . . . . . 
+. . . . . . . . . 
+. . . O O O O . . 
+. . . O [07mO[0m O [07mO[0m . . 
+. . . [07mO[0m [07mO[0m [07mO[0m [07mO[0m [07mO[0m . 
+. . . . . . . . . 
+. . . . . . . . . 
+. . . . . . . . . 
+
+Payoff (policy 1 playing as Black): 1
+[07mO[0m [07mO[0m [07mO[0m . [07mO[0m . O . . 
+O O [07mO[0m [07mO[0m [07mO[0m O O . . 
+O [07mO[0m [07mO[0m [07mO[0m O O [07mO[0m [07mO[0m . 
+. O [07mO[0m [07mO[0m O O [07mO[0m [07mO[0m . 
+. O O O [07mO[0m O O O . 
+. O [07mO[0m [07mO[0m O [07mO[0m O O . 
+. [07mO[0m [07mO[0m O [07mO[0m [07mO[0m O O O 
+. . . . O [07mO[0m O [07mO[0m [07mO[0m 
+. . . . [07mO[0m O [07mO[0m O . 
+
+Payoff (policy 1 playing as White): 1
+. . . . . . . . . 
+. . . . . . . . . 
+. . . . . . [07mO[0m . . 
+. . O O O [07mO[0m [07mO[0m . . 
+. . O [07mO[0m [07mO[0m O [07mO[0m . . 
+. . O [07mO[0m [07mO[0m O [07mO[0m . . 
+. . . . O O [07mO[0m . . 
+. . . . . . . . . 
+. . . . . . . . . 
+
+Payoff (policy 1 playing as Black): 0
+[07mO[0m [07mO[0m O O [07mO[0m O [07mO[0m [07mO[0m [07mO[0m 
+[07mO[0m O [07mO[0m [07mO[0m [07mO[0m O O O [07mO[0m 
+O [07mO[0m [07mO[0m [07mO[0m O O O [07mO[0m [07mO[0m 
+O O O [07mO[0m O [07mO[0m [07mO[0m O O 
+[07mO[0m O O O [07mO[0m O [07mO[0m [07mO[0m [07mO[0m 
+[07mO[0m O [07mO[0m O O [07mO[0m O O O 
+O [07mO[0m O [07mO[0m [07mO[0m [07mO[0m O O [07mO[0m 
+[07mO[0m O O [07mO[0m [07mO[0m [07mO[0m O O [07mO[0m 
+[07mO[0m [07mO[0m O O O O [07mO[0m [07mO[0m O 
+
+Payoff (policy 1 playing as White): -1
+. . . . . . . . . 
+. . . . . [07mO[0m O . . 
+. . . . . O [07mO[0m . O 
+. . . O [07mO[0m O [07mO[0m [07mO[0m . 
+. . . . [07mO[0m O [07mO[0m . [07mO[0m 
+. . . [07mO[0m O [07mO[0m O . . 
+. . . O [07mO[0m . [07mO[0m . . 
+. . O O . . . . . 
+. O . . . . . . . 
+
+Payoff (policy 1 playing as Black): 1
+. . . . . . . . . 
+. O . . . . O . . 
+. [07mO[0m [07mO[0m [07mO[0m . O . . . 
+. . O [07mO[0m O O [07mO[0m O . 
+. . [07mO[0m O [07mO[0m O O . . 
+. . [07mO[0m [07mO[0m O [07mO[0m O . . 
+. . . [07mO[0m [07mO[0m [07mO[0m O O . 
+. . . . . [07mO[0m O . [07mO[0m 
+. . . . . . O [07mO[0m . 
+
+Payoff (policy 1 playing as White): 1
+. . . . . O . . . 
+. . . O [07mO[0m [07mO[0m [07mO[0m . . 
+. O . [07mO[0m O O . . . 
+. . [07mO[0m O O O O [07mO[0m . 
+. O O [07mO[0m [07mO[0m O O [07mO[0m . 
+. . [07mO[0m [07mO[0m [07mO[0m O O . . 
+. . [07mO[0m O [07mO[0m [07mO[0m [07mO[0m [07mO[0m . 
+. . . . [07mO[0m . O O . 
+. . . . [07mO[0m . . . . 
+
+Payoff (policy 1 playing as Black): -1
+O . [07mO[0m . . . . [07mO[0m . 
+. O . O . [07mO[0m O . . 
+. . [07mO[0m [07mO[0m O O O O [07mO[0m 
+. . O [07mO[0m O O [07mO[0m . . 
+. . O O [07mO[0m O O O . 
+. . [07mO[0m [07mO[0m O [07mO[0m [07mO[0m [07mO[0m . 
+. [07mO[0m [07mO[0m [07mO[0m [07mO[0m [07mO[0m O O . 
+. . . [07mO[0m [07mO[0m [07mO[0m O . . 
+. . . . . O . . . 
+
+Payoff (policy 1 playing as White): 1
+. . . . . . . . . 
+. . . O O . . . . 
+. . O [07mO[0m [07mO[0m . [07mO[0m . . 
+. . O [07mO[0m [07mO[0m [07mO[0m [07mO[0m O . 
+. . O O [07mO[0m O [07mO[0m . . 
+. . O [07mO[0m [07mO[0m O . . . 
+. . [07mO[0m . O . . . . 
+. . . . . . . . . 
+. . . . . . . . . 
+
+Payoff (policy 1 playing as Black): -1
+. . [07mO[0m O O [07mO[0m O . . 
+. O [07mO[0m [07mO[0m [07mO[0m [07mO[0m O . . 
+. . [07mO[0m [07mO[0m O O O . . 
+O O [07mO[0m O [07mO[0m O [07mO[0m [07mO[0m . 
+. O O [07mO[0m [07mO[0m O O O . 
+O O O [07mO[0m [07mO[0m [07mO[0m O [07mO[0m . 
+[07mO[0m [07mO[0m [07mO[0m [07mO[0m [07mO[0m O [07mO[0m . . 
+. . . . O [07mO[0m . O . 
+. . . . . . . . . 
+
+Payoff (policy 1 playing as White): 1
+. . . . . . . . . 
+. . . . . . . . . 
+. O . . . . [07mO[0m . . 
+O . [07mO[0m . O [07mO[0m . . . 
+. [07mO[0m O O [07mO[0m O . . . 
+. O [07mO[0m [07mO[0m [07mO[0m O . . . 
+. [07mO[0m [07mO[0m [07mO[0m O . O . . 
+. O [07mO[0m [07mO[0m O . . . . 
+. . . . . . . . . 
+
+Payoff (policy 1 playing as Black): 0
+[07mO[0m [07mO[0m O O O [07mO[0m [07mO[0m [07mO[0m O 
+[07mO[0m O O [07mO[0m [07mO[0m [07mO[0m O O [07mO[0m 
+O [07mO[0m [07mO[0m [07mO[0m O O O O [07mO[0m 
+O [07mO[0m O [07mO[0m O O [07mO[0m [07mO[0m [07mO[0m 
+O [07mO[0m O O [07mO[0m O [07mO[0m [07mO[0m O 
+[07mO[0m O [07mO[0m [07mO[0m O [07mO[0m O O O 
+[07mO[0m [07mO[0m [07mO[0m O O [07mO[0m O O [07mO[0m 
+[07mO[0m O O O [07mO[0m [07mO[0m O [07mO[0m [07mO[0m 
+O [07mO[0m [07mO[0m O O O [07mO[0m [07mO[0m O 
+
+Payoff (policy 1 playing as White): 1
+. . [07mO[0m . . . . . . 
+. . [07mO[0m O [07mO[0m [07mO[0m . . . 
+O [07mO[0m [07mO[0m [07mO[0m O O . . . 
+[07mO[0m . [07mO[0m O O O [07mO[0m . . 
+. O [07mO[0m [07mO[0m [07mO[0m O . . . 
+. . O . O [07mO[0m O . . 
+. . . O . . . O . 
+. . . . . . . . [07mO[0m 
+. . . . . . . . . 
+
+Payoff (policy 1 playing as Black): -1
+. . . . . . . [07mO[0m . 
+. O . . . . O . . 
+. [07mO[0m [07mO[0m [07mO[0m O O O O [07mO[0m 
+. . . [07mO[0m O . [07mO[0m [07mO[0m . 
+. . . O [07mO[0m O [07mO[0m . . 
+. . [07mO[0m . O [07mO[0m O . . 
+. O . . [07mO[0m [07mO[0m O O . 
+. . . . . [07mO[0m O . [07mO[0m 
+. . . . . . . . . 
+
+Payoff (policy 1 playing as White): -1
+. . . . . . . [07mO[0m . 
+. . . . O [07mO[0m O . . 
+[07mO[0m . O [07mO[0m [07mO[0m O . . . 
+O . [07mO[0m O O O [07mO[0m . . 
+O [07mO[0m . O [07mO[0m O O . . 
+O . [07mO[0m O [07mO[0m [07mO[0m [07mO[0m [07mO[0m O 
+O . . [07mO[0m . . [07mO[0m . . 
+O [07mO[0m . . O . . . . 
+. . . . . [07mO[0m . . . 
+
+Payoff (policy 1 playing as Black): 1
+. . . . . . O . . 
+[07mO[0m O [07mO[0m . O [07mO[0m . O . 
+. O [07mO[0m [07mO[0m [07mO[0m O [07mO[0m [07mO[0m . 
+. O O [07mO[0m [07mO[0m O O [07mO[0m . 
+. . O O [07mO[0m O [07mO[0m [07mO[0m . 
+. . [07mO[0m O [07mO[0m [07mO[0m O O [07mO[0m 
+. . . [07mO[0m O O O [07mO[0m O 
+. . . [07mO[0m O O [07mO[0m [07mO[0m O 
+. . . . . . . . . 
+
+Payoff (policy 1 playing as White): 1
+. . . . . . . . . 
+. . . . . . . . . 
+. [07mO[0m . . . [07mO[0m . . . 
+. . [07mO[0m O O O O . . 
+. . . [07mO[0m [07mO[0m O O . . 
+. . . O [07mO[0m [07mO[0m [07mO[0m . . 
+. . . . . [07mO[0m O . . 
+. . . . . . . . . 
+. . . . . . . . . 
+
+Payoff (policy 1 playing as Black): 1
+. . . . . . . . . 
+. O . . O . . . . 
+. . [07mO[0m O . [07mO[0m . . . 
+. . O [07mO[0m [07mO[0m O [07mO[0m . . 
+. O . [07mO[0m [07mO[0m O [07mO[0m [07mO[0m . 
+O . O [07mO[0m O [07mO[0m O . . 
+. [07mO[0m . . . [07mO[0m O . . 
+. . . . . . O . . 
+. . . . . . . . . 
+
+Payoff (policy 1 playing as White): 1
+. . . . . . . . . 
+. . O [07mO[0m . . . . . 
+. O [07mO[0m O O [07mO[0m O . . 
+. [07mO[0m O O O [07mO[0m O O . 
+. [07mO[0m O [07mO[0m [07mO[0m O [07mO[0m O [07mO[0m 
+. . [07mO[0m O [07mO[0m [07mO[0m [07mO[0m [07mO[0m O 
+. . O O [07mO[0m O [07mO[0m O . 
+. . . . [07mO[0m . [07mO[0m . . 
+. . . . [07mO[0m . . . . 
+
+Payoff (policy 1 playing as Black): -1
+. . . . . . . . . 
+. [07mO[0m . . . . . . . 
+. . [07mO[0m . . . . . . 
+. . . [07mO[0m O . [07mO[0m . . 
+. . . O [07mO[0m O . O . 
+. . . . O [07mO[0m . . . 
+. . . . . [07mO[0m O . . 
+. . . . . . . . . 
+. . . . . . . . . 
+
+Payoff (policy 1 playing as White): 1
+. . . . . . . . . 
+. . . . . . . . . 
+. . . O . . . . . 
+. . O O O [07mO[0m . . . 
+. . . [07mO[0m [07mO[0m O . . . 
+. . . O [07mO[0m [07mO[0m [07mO[0m [07mO[0m [07mO[0m 
+. . . . . . . . O 
+. . . . . . . . . 
+. . . . . . . . . 
+
+Payoff (policy 1 playing as Black): -1
+. . . . . . [07mO[0m . . 
+. . . . . O O . . 
+. . . . O . . . . 
+. O . O . [07mO[0m . . . 
+O . O [07mO[0m [07mO[0m O [07mO[0m . . 
+. [07mO[0m . O . [07mO[0m [07mO[0m [07mO[0m . 
+. . . O [07mO[0m [07mO[0m [07mO[0m [07mO[0m [07mO[0m 
+. . . O O . O [07mO[0m . 
+. . . . . . . . O 
+
+Payoff (policy 1 playing as White): 1
+. . . . . . . . . 
+. . O [07mO[0m . . . . . 
+. O O O [07mO[0m O O . . 
+. [07mO[0m O O O [07mO[0m [07mO[0m . . 
+. [07mO[0m [07mO[0m [07mO[0m [07mO[0m O [07mO[0m O . 
+. . [07mO[0m O [07mO[0m [07mO[0m [07mO[0m O O 
+. . O O [07mO[0m [07mO[0m [07mO[0m [07mO[0m [07mO[0m 
+. . . O . O . . . 
+. . . . . . . . . 
+
+Payoff (policy 1 playing as Black): 1
+. [07mO[0m . [07mO[0m . O . . . 
+. [07mO[0m O . O . . . . 
+. [07mO[0m O O O [07mO[0m O O . 
+. . O [07mO[0m O O [07mO[0m O . 
+. O [07mO[0m O [07mO[0m O [07mO[0m [07mO[0m . 
+[07mO[0m [07mO[0m [07mO[0m [07mO[0m O [07mO[0m [07mO[0m [07mO[0m . 
+. . . [07mO[0m O [07mO[0m O O . 
+. . . . . O O [07mO[0m . 
+. . . . . . . . . 
+
+Payoff (policy 1 playing as White): -1
+. . . [07mO[0m . . . . . 
+O . . . O . . . . 
+. [07mO[0m [07mO[0m [07mO[0m . . . . . 
+. . [07mO[0m O O O . . . 
+O [07mO[0m [07mO[0m [07mO[0m [07mO[0m O . . . 
+. [07mO[0m . . [07mO[0m [07mO[0m O . . 
+. . . O O O O O . 
+. . . . . . . . [07mO[0m 
+. . . . . . . . . 
+
+Payoff (policy 1 playing as Black): -1
+. . . . . . . . . 
+. . O . . . [07mO[0m . . 
+. . . O . O . . . 
+. . . O O . [07mO[0m . O 
+. . . O [07mO[0m O O [07mO[0m . 
+. . O [07mO[0m . [07mO[0m [07mO[0m . O 
+. [07mO[0m [07mO[0m [07mO[0m [07mO[0m [07mO[0m . . . 
+. . . . [07mO[0m . . . . 
+. . . O . . . . . 
+
+NET: 0.08; WINS: 0.54

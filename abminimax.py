@@ -53,7 +53,7 @@ class LRU:
         return result
 
 def heur(state):
-    # Do a n^2 search
+    # Do a O(n) search
     return state.heuristic()
 
 def abminimax(state, alpha, beta, h, depth, start_time, time_limit):
@@ -131,7 +131,7 @@ def baseline_policy(time_limit):
         # Init transpotision table
         ttabminimax = LRU(abminimax, maxsize=1024)
         
-        # Iterative deepening, begin searching at depth 2
+        # Searching at depth 1
         it_depth = 2
         searched_depth = None
 
@@ -174,7 +174,7 @@ def abminimax_policy(time_limit):
         best_move = None
         
         # Init transpotision table
-        ttabminimax = LRU(abminimax, maxsize=1024)
+        ttabminimax = LRU(abminimax, maxsize=10000)
         
         # Iterative deepening, begin searching at depth 2
         it_depth = 2
@@ -187,11 +187,13 @@ def abminimax_policy(time_limit):
                 
                 # Increase iterative deepening
                 searched_depth = it_depth
-                it_depth += 1
+                if searched_depth == 4:
+                    break
+                it_depth += 2
             else:
                 break
         
-        print(f"Deepest depth searched: {searched_depth}")
+        # print(f"Deepest depth searched: {searched_depth}")
         # print(ttabminimax.cache)
         # print(f"Hits: {ttabminimax.hits}")
 

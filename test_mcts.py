@@ -30,7 +30,7 @@ def compare_policies(game, p1, p2, games, prob):
         position = game.initial_state()
 
         while not position.is_terminal():
-            position.display()
+            # position.display()
             if random.random() < prob:
                 if position.actor() == i % 2:
                     move = p1_policy(position)
@@ -116,7 +116,7 @@ if __name__ == '__main__':
         elif args.game == "abminimax":
             test_game(game,
                     args.count,
-                    0,
+                    0.1,
                     lambda: abminimax.abminimax_policy(args.time),
                     lambda: abminimax.baseline_policy(args.time))
         else:
