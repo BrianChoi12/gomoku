@@ -1,9 +1,11 @@
-
-
 import random
 import math
 import time
 import copy
+from mcts_heuristic import mcts_h
+
+NUM_SIMULATE = 50 #number of times to simulate when leaf node has been found, for rapid average value estimation
+WEIGHT_HEURISTIC = 100 #hyper parameter of how much to weight the heuristic used in MCTS
 
 class myNode():
     """
@@ -15,15 +17,16 @@ class myNode():
     """
     def __init__(self, position):
         self.position = position
-        self.child = []
+        self.child = [] #keep track of children
         self.actions = position.get_actions()
-        self.payoff = 0
-        self.times = 0
+        self.payoff = 0 #total payoff from simulations
+        self.times = 0 #total number of times simulated
         self.isLeaf = False
-        self.visited = []
+        self.visited = [] #keep track of child visit counts
         self.terminal = self.position.is_terminal()
-        self.aToc = dict() #key is action, c is child
-
+        self.aToc = dict() #key is action, c is resulting child, stored for faster computation
+        self.check = False #if the visit count is nonzero but the node hasn't been visited yet
+                            #case when the newly expanded node has initialized values
 
 def traverse(node, nodeDict):
     """
@@ -37,28 +40,53 @@ def traverse(node, nodeDict):
     sequence = []
     while(True):
         sequence.append(node)
+
+        #if terminal node
         if(node.terminal): 
             return sequence
         
-        if node.times == 0: 
+        #if node has never been visited before
+        if node.times == 0 or node.check: 
             node.isLeaf = True
             return sequence
 
+        if node.position.actor() == 0:
+            player = 1
+        else:
+            player = -1
+
+        #if leaf node, expand children
         if node.isLeaf:
             for act in node.actions:
                 next_state = node.position.successor(act)
                 nodeDict[node.position].aToc[act] = next_state
+                inTree = True
                 if next_state not in nodeDict:
                     nextNode = myNode(next_state)
                     nodeDict[next_state] = nextNode
+                    inTree = False
                 else:
                     nextNode = nodeDict[next_state] 
+
+                    #if heuristic hasn't been used yet on node and node
+                    #hasn't been visited many times
+                    if nextNode.times < WEIGHT_HEURISTIC:
+                        inTree = False
                 
                 node.child.append(nextNode)
-                node.visited.append(0)
-                nextNode.payoff = next_state.heuristic()*10
-                nextNode.times = 10
-
+                
+                if not inTree:
+                    #initialize node visit and payoff counts based on heuristic
+                    result = mcts_h(next_state)
+                    if(result == 100000): #check if heuristic indicates terminal state
+                        nextNode.payoff += 1 * WEIGHT_HEURISTIC
+                    else: #otherwise normalize heuristic value
+                        nextNode.payoff += result/10000 * WEIGHT_HEURISTIC
+                        
+                    nextNode.times += 1 * WEIGHT_HEURISTIC
+                    nextNode.check = True
+                node.visited.append(nextNode.times)
+            
             node.isLeaf = False
             possible = node.child[0]
             possible.isLeaf = True
@@ -66,16 +94,12 @@ def traverse(node, nodeDict):
             sequence.append(possible)
             return sequence
         
-        if node.position.actor() == 0:
-            player = 1
-        else:
-            player = -1
-
         maxVal = float('-inf')  
         maxState = None
         maxIndex = 0
 
         visitIndex = 0
+
         #apply UCB2 formula for each child node
         for childNode in node.child:
             visits = node.visited[visitIndex]
@@ -105,20 +129,32 @@ def simulate(leaf, nodeDict):
     """
     search = leaf
     moves = set()
+
     while search.is_terminal() == False:
         actions = search.get_actions()
+
+        #choose random action
         choice = actions[random.randint(0,len(actions)-1)]
         moves.add(choice)
         nextSearch = search.successor(choice)
         search = nextSearch
 
     pay = search.payoff()
-
+    
     check = nodeDict[leaf].aToc
+    
+    #update weights in rapid average value estimation, based on actions taken
     for move in moves:
         if move in check:
-            nodeDict[check[move]].times += 1
-            nodeDict[check[move]].payoff += pay
+            if check[move] in nodeDict: 
+                nodeDict[check[move]].times += 1/NUM_SIMULATE
+                nodeDict[check[move]].payoff += pay/NUM_SIMULATE
+            else:
+                position = leaf.successor(move)
+                nodeDict[check[move]] = myNode(position)
+                nodeDict[check[move]].times += 1/NUM_SIMULATE
+                nodeDict[check[move]].payoff += pay/NUM_SIMULATE
+                nodeDict[check[move]].check = True
 
     return pay
 
@@ -129,9 +165,10 @@ def mcts_policy(seconds):
 
         seconds - number of seconds to run for
     """
-    NUM_SIMULATE = 1
+    nodeDict = dict()
+
     def policy(state): 
-        nodeDict = dict()
+        
         if state not in nodeDict:
             nodeDict[state] = myNode(state)
         node = nodeDict[state]
@@ -141,7 +178,11 @@ def mcts_policy(seconds):
             sequence = traverse(node, nodeDict)
             leaf = sequence[-1]
             value = 0
-            for i in range(NUM_SIMULATE):   
+
+            for action in leaf.actions:
+                nodeDict[leaf.position].aToc[action] = leaf.position.successor(action)
+            
+            for i in range(NUM_SIMULATE): 
                 value += simulate(leaf.position, nodeDict)
 
             for i in range(len(sequence)):

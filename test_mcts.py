@@ -18,7 +18,7 @@ def random_choice(position):
     return random.choice(moves)
 
 
-def compare_policies(game, p1, p2, games, prob):
+def compare_policies(game, p1, p2, games, p1_prob, p2_prob):
     p1_wins = 0
     p2_wins = 0
     p1_score = 0
@@ -30,6 +30,10 @@ def compare_policies(game, p1, p2, games, prob):
         position = game.initial_state()
 
         while not position.is_terminal():
+            if position.actor() == i % 2:
+                prob = p1_prob
+            else:
+                prob = p2_prob
             # position.display()
             if random.random() < prob:
                 if position.actor() == i % 2:
@@ -41,19 +45,6 @@ def compare_policies(game, p1, p2, games, prob):
             
             position = position.successor(move)
         
-        #checking that minimax is working correctly by testing on pegging
-        # and ensuring that MCTS never beats minimax with depth 14, which can search the entire
-        # tree and so is optimal
-        #while not copy.is_terminal():
-        #    move = p2_policy(copy)
-        #    copy = copy.successor(move)
-        #if (i % 2 == 0 and position.payoff() > copy.payoff()) or (i % 2 == 1 and position.payoff() < copy.payoff()):
-        #    print("COPY: " + str(copy))
-            
-        # to see final position, which for pegging includes the
-        # complete sequence of cards played
-        # print(position)
-        #print(position.payoff() * (1 if i % 2 == 0 else -1))
         p1_score += position.payoff() * (1 if i % 2 == 0 else -1)
         if position.payoff() == 0:
             p1_wins += 0.5
@@ -68,7 +59,7 @@ def compare_policies(game, p1, p2, games, prob):
     return p1_score / games, p1_wins / games
 
 
-def test_game(game, count, p_random, p1_policy_fxn, p2_policy_fxn):
+def test_game(game, count, p1_random, p2_random, p1_policy_fxn, p2_policy_fxn):
     ''' Tests a search policy through a series of complete games of Kalah.
         The test passes if the search wins at least the given percentage of
         games and calls its heuristic function at most the given proportion of times
@@ -86,7 +77,7 @@ def test_game(game, count, p_random, p1_policy_fxn, p2_policy_fxn):
                        suggested move
                       
     '''
-    margin, wins = compare_policies(game, p1_policy_fxn, p2_policy_fxn, count, 1.0 - p_random)
+    margin, wins = compare_policies(game, p1_policy_fxn, p2_policy_fxn, count, 1.0 - p1_random, 1.0 - p2_random)
 
     print("NET: ", margin, "; WINS: ", wins, sep="")
 
@@ -111,14 +102,17 @@ if __name__ == '__main__':
             test_game(game,
                     args.count,
                     0,
+                    0.1,
                     lambda: mc_rave.mcts_policy(args.time),
                     lambda: abminimax.baseline_policy(args.time))
         elif args.game == "abminimax":
             test_game(game,
                     args.count,
+                    0.1, 
                     0.1,
-                    lambda: abminimax.abminimax_policy(args.time),
-                    lambda: abminimax.baseline_policy(args.time))
+                    lambda: abminimax.baseline_policy(args.time),
+                    lambda: abminimax.abminimax_policy(args.time))
+                    
         else:
             raise MCTSTestError("agent not in list")
         sys.exit(0)
