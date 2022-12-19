@@ -1,5 +1,8 @@
 # Gomoku
 
+## Submission
+Samuel Kim (smk227), Stephen Yin (syy2), Brian Choi (bc749)
+
 ## Description 
 We developed three agents to play Gomoku. The first agent is a baseline agent, made by Samuel Kim, that uses a simple heuristic based on possible shapes of pieces and minimax to search to a depth of 1 (after each player plays a move). The second agent, made by Stephen Yin, uses alpha-beta pruning with iterative deepening and transposition tables within an allocated time to make a move, applying the same heuristic as the previous step. The third agent, by Brian Choi, uses Monte Carlo Tree Search with rapid average value estimation to initialize node reward and visit counts.
 
