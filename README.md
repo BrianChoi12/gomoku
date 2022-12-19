@@ -23,7 +23,7 @@ The Gomoku script can be run with arguments
 Note that there is a limit of game board size 10 because in `state.py` precomputation is only done for game boards up to size 10. Changing the `sz` variable can fix this.
 
 ## Results
-The winning percentage of the alpha-beta minimax agent over the baseline agent over 100 games on an 9x9 Gomoku board with either 15 seconds per move OR when depth 2 finished searching is 61%. 
+The winning percentage of the alpha-beta minimax agent over the baseline agent over 1000 games on an 9x9 Gomoku board with either 15 seconds per move OR when depth 2 (each player moves twice, we define it as depth 4) finished searching is 59.35%. Each player had a 10% chance of playing a random move. Note this took around 16 hours to complete, so testing on 100 games may be more reasonable. See `results.txt`.
 
 The winning percentage of the third agent over the first agent over NUM_GAMES games with N seconds to make a move is PERCENT_WIN.
 
