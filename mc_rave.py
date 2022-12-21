@@ -28,6 +28,31 @@ class myNode():
         self.check = False #if the visit count is nonzero but the node hasn't been visited yet
                             #case when the newly expanded node has initialized values
 
+def UCB2(player, node, sequence): 
+    maxVal = float('-inf')  
+    maxState = None
+    maxIndex = 0
+
+    visitIndex = 0
+    #apply UCB2 formula for each child node
+    for childNode in node.child:
+        visits = node.visited[visitIndex]
+        
+        if(visits == 0):
+            node.visited[visitIndex] += 1
+            sequence.append(childNode)
+            if childNode.child == []:
+                childNode.isLeaf = True
+            return -1
+
+        prob = player * childNode.payoff/(childNode.times) + math.sqrt(2 * math.log(node.times)/visits) 
+        if prob > maxVal:
+            maxVal = prob; 
+            maxState = childNode
+            maxIndex = visitIndex
+        visitIndex += 1
+    return maxIndex, maxState
+
 def traverse(node, nodeDict):
     """
         find leaf node by traversing from starting node and applying UCB2 formula
@@ -87,11 +112,13 @@ def traverse(node, nodeDict):
                     nextNode.check = True
                 node.visited.append(nextNode.times)
             
-            node.isLeaf = False
+            maxIndex, maxState = UCB2(player, node, sequence)
+            node.visited[maxIndex] += 1
+            """node.isLeaf = False
             possible = node.child[0]
             possible.isLeaf = True
             node.visited[0] += 1
-            sequence.append(possible)
+            sequence.append(possible)"""
             return sequence
         
         maxVal = float('-inf')  
@@ -174,7 +201,9 @@ def mcts_policy(seconds):
         node = nodeDict[state]
 
         end = time.time() + seconds
+        count = 0
         while(time.time() < end):
+            count += 1
             sequence = traverse(node, nodeDict)
             leaf = sequence[-1]
             value = 0
@@ -188,6 +217,7 @@ def mcts_policy(seconds):
             for i in range(len(sequence)):
                 sequence[i].payoff += value
                 sequence[i].times += NUM_SIMULATE
+        #print(count) //print number of iterations the tree search can go through
         player = -1
         if(state.actor() == 0):
             player = 1
