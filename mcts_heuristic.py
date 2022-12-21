@@ -63,7 +63,6 @@ def mcts_h(state):
     """
     global ttabminimax
     ttabminimax = LRU(abminimax, maxsize=1024)
-    
     value = abminimax(state, float('-inf'), float('inf'), heur, 2, 0, 1000)[0]; 
     return value
 
