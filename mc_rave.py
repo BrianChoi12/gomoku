@@ -114,11 +114,7 @@ def traverse(node, nodeDict):
             
             maxIndex, maxState = UCB2(player, node, sequence)
             node.visited[maxIndex] += 1
-            """node.isLeaf = False
-            possible = node.child[0]
-            possible.isLeaf = True
-            node.visited[0] += 1
-            sequence.append(possible)"""
+            
             return sequence
         
         maxVal = float('-inf')  
@@ -195,26 +191,30 @@ def mcts_policy(seconds):
     nodeDict = dict()
 
     def policy(state): 
-        
+        """
+            takes in a given state, runs mc-rave for a given number of seconds
+
+            state - starting state (acting root of game tree)
+        """
         if state not in nodeDict:
             nodeDict[state] = myNode(state)
         node = nodeDict[state]
 
         end = time.time() + seconds
         count = 0
-        while(time.time() < end):
+        while(time.time() < end): #while not out of time
             count += 1
-            sequence = traverse(node, nodeDict)
+            sequence = traverse(node, nodeDict) #traverse to find leaf node
             leaf = sequence[-1]
             value = 0
 
-            for action in leaf.actions:
+            for action in leaf.actions: #keep dictionary of action to resulting child for RAVE
                 nodeDict[leaf.position].aToc[action] = leaf.position.successor(action)
             
-            for i in range(NUM_SIMULATE): 
+            for i in range(NUM_SIMULATE): #simulate a given number of times for RAVE
                 value += simulate(leaf.position, nodeDict)
 
-            for i in range(len(sequence)):
+            for i in range(len(sequence)): #backpropagate
                 sequence[i].payoff += value
                 sequence[i].times += NUM_SIMULATE
         #print(count) //print number of iterations the tree search can go through
